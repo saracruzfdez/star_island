@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Iceland-Regular';
+    src: url("../polices/Iceland-Regular.ttf") format("truetype")
+}
+
+body {
+    background-color: black;
+    overflow-y: hidden;
+}
+
+#teaser_image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 100vh;
+    /* float: right; */
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 25%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 25%);
+}
+
+/* Compte à Rebours */
+
+.box-rebours {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box_jour,
+.box_heure,
+.box_minute,
+.box_seconde
+ {
+    padding: 10px;
+    color: white;
+    font-family: "Iceland-Regular";
+    font-size: 1.5rem;
+
+}
+
+
+
+
+#jour,
+#heure,
+#minute,
+#seconde {
+    background: black;
+    padding: 10px 20px;
+    color: white;
+    font-size: 4.5rem;
+    font-weight: bold;
+    font-family: "Iceland-Regular";
+}
+
+#separator {
+    color: white;
+  
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-family: "Iceland-Regular";
+}
+

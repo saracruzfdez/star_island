@@ -11,43 +11,96 @@
 
 <body>
 
-    <img id="teaser_image" src="..\assets\img\Perso2-removebg-preview.png" alt="">
+    <!-- logo -->
+    <div>
+        <img id="logoStarIsland" src="..\assets\img\starisland.png" alt="">
+    </div>
 
+    <!-- perso background -->
+    <div class="parent">
+        <img id="teaser_image" src="..\assets\img\Perso2-removebg-preview.png" alt="">
+    </div>
+
+    <!-- compteur -->
     <div class="box-rebours">
         <div class="box_jour">
             <div id="jour">00</div>
-            <span id="jour_label">Jours</span>
+            <span id="jour_label"></span>
         </div>
-      
-            <div id="separator">:</div>
-          
-     
+
+        <div id="separator">:</div>
+
         <div class="box_heure">
             <div id="heure">00</div>
-            <span id="heure_label">Heures</span>
+            <span id="heure_label"></span>
         </div>
+
         <div id="separator">:</div>
+
         <div class="box_minute">
             <div id="minute">00</div>
-            <span id="minute_label">Minutes</span>
+            <span id="minute_label"></span>
         </div>
+
         <div id="separator">:</div>
+
         <div class="box_seconde">
             <div id="seconde">00</div>
-            <span id="seconde_label">Secondes</span>
+            <span id="seconde_label"></span>
         </div>
     </div>
 
+    <!-- texte -->
+    <div id="texte">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue est, interdum vitae purus sed, tincidunt placerat mi. Aliquam dui ex, iaculis vel mi in, iaculis iaculis dui. In posuere metus eleifend risus euismod, iaculis pulvinar urna scelerisque. Nullam suscipit quam sit amet arcu sagittis fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+    </div>
 
-<div class="reseaux">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-    <img src="" alt="">
-</div>
+    <!-- reseaux -->
+    <div class="container_reseaux">
+        <div class="reseaux">
+
+            <a href=""><img src="..\assets\img\logo_Instagram.png" alt=""></a>
+
+            <a href="">
+                <img src="..\assets\img\logo_facebook.png" alt="">
+            </a>
+
+            <a href="">
+                <img src="..\assets\img\Logo_tiktok.png" alt="">
+            </a>
+
+            <a href="">
+                <img src="..\assets\img\logo_discord.png" alt="">
+            </a>
+
+            <a href="">
+                <img src="..\assets\img\logo_twitch.png" alt="">
+            </a>
+
+            <a href="">
+                <img src="..\assets\img\logo_twitter.png" alt="">
+            </a>
+
+            <a href="">
+                <img src="..\assets\img\logo_youtube.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="logoDiscord2" id="logoDiscord2">
+        <img src="..\assets\img\logo_discord.png" alt="">
+    </div>
+
+    <div id="degrade">
+
+    </div>
+
+    </div>
+
+
+    <!-- METTRE LOGO ET TEXTE EXPLICATIF -->
 
 
     <script type="text/javascript">
@@ -96,6 +149,24 @@
         }
 
         reboursF();
+
+
+        /* evenement on click sur logo 2 le faire disparaitre et faire aparaitre les logos reseaux sociaux */
+
+
+        let logoDiscord2 = document.getElementById("logoDiscord2")
+
+        logoDiscord2.addEventListener('click', function() {
+
+            let containerReseaux = document.getElementById("")
+
+
+            if (1) {
+
+            } else {}
+
+
+        })
     </script>
 
 </body>

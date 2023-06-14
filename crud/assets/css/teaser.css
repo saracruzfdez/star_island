@@ -5,23 +5,38 @@
 
 body {
     background-color: black;
-    overflow-y: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: auto;
 }
 
-#teaser_image {
-    position: absolute;
-    top: 0;
+html {
+    position: fixed;
+    overflow: auto;
+    left: 0;
     right: 0;
-    width: auto;
-    height: 100vh;
-    /* float: right; */
-    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 25%);
-    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 25%);
+    top: 0;
+    bottom: 0;
+}
+
+/* logo */
+#logoStarIsland {
+    position: absolute;
+    height: auto;
+    width: 165px;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
 }
 
 /* Compte à Rebours */
-
 .box-rebours {
+    position: absolute;
+    top: 100px;
+    right: 25%;
+    width: 50%;
+    margin: 0 auto;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -32,23 +47,17 @@ body {
 .box_jour,
 .box_heure,
 .box_minute,
-.box_seconde
- {
+.box_seconde {
     padding: 10px;
     color: white;
     font-family: "Iceland-Regular";
     font-size: 1.5rem;
-
 }
-
-
-
 
 #jour,
 #heure,
 #minute,
 #seconde {
-    background: black;
     padding: 10px 20px;
     color: white;
     font-size: 4.5rem;
@@ -58,10 +67,145 @@ body {
 
 #separator {
     color: white;
-  
     font-size: 4.5rem;
     margin-bottom: 1.5rem;
     font-weight: bold;
     font-family: "Iceland-Regular";
 }
 
+/* background image */
+.parent {
+    text-align: start;
+}
+
+#teaser_image {
+    object-position: left;
+    width: auto;
+    height: 100vh;
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 35%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 35%);
+    z-index: auto;
+}
+
+/* reseaux */
+.container_reseaux {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 25px;
+    z-index: 25;
+}
+
+.reseaux {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 0.5em #8a8a8a;
+    border-radius: 25px;
+}
+
+.reseaux img {
+    margin: 0 7px;
+}
+
+.logoDiscord2 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+/* texte */
+#texte {
+    position: absolute;
+    top: 120px;
+    left: 65%;
+    width: 30%;
+    color: #EA4C6F;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Iceland-Regular";
+}
+
+/* degrade */
+#degrade {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 30%;
+    background-color: black;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+    z-index: 20;
+}
+
+@media (max-width: 634px) {
+
+    /* logo */
+    #logoStarIsland {
+        position: absolute;
+        height: auto;
+        width: 135px;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+    }
+
+    /* texte */
+    #texte {
+        position: absolute;
+        top: 300px;
+        left: 65px;
+        width: 70%;
+        color: #EA4C6F;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: "Iceland-Regular";
+        text-align: center;
+    }
+
+    /* Compte à Rebours */
+    .box-rebours {
+        position: absolute;
+        top : 175px;
+        margin: 0 auto;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .box_jour,
+    .box_heure,
+    .box_minute,
+    .box_seconde {
+        padding: 10px;
+        color: white;
+        font-family: "Iceland-Regular";
+        font-size: 1rem;
+    }
+
+    #jour,
+    #heure,
+    #minute,
+    #seconde {
+        padding: 5px 10px;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        font-family: "Iceland-Regular";
+    }
+
+    #separator {
+        color: white;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        font-family: "Iceland-Regular";
+    }
+}

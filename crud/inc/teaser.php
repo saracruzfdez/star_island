@@ -58,7 +58,7 @@
     </div>
 
     <!-- reseaux -->
-    <div class="container_reseaux">
+    <div class="container_reseaux" id="container_reseaux">
         <div class="reseaux">
 
             <a href=""><img src="..\assets\img\logo_Instagram.png" alt=""></a>
@@ -72,7 +72,7 @@
             </a>
 
             <a href="">
-                <img src="..\assets\img\logo_discord.png" alt="">
+                <img id="discordLogo" src="..\assets\img\logo_discord.png" alt="">
             </a>
 
             <a href="">
@@ -89,8 +89,8 @@
         </div>
     </div>
 
-    <div class="logoDiscord2" id="logoDiscord2">
-        <img src="..\assets\img\logo_discord.png" alt="">
+    <div class="logoDiscord2">
+        <img id="logoDiscord2" src="..\assets\img\logo_discord.png" alt="">
     </div>
 
     <div id="degrade">
@@ -99,11 +99,9 @@
 
     </div>
 
-
-    <!-- METTRE LOGO ET TEXTE EXPLICATIF -->
-
-
+    <!-- script -->
     <script type="text/javascript">
+        /* compte rebours */
         function reboursF() {
             let rebours = document.getElementById("rebours"),
                 jour = document.getElementById("jour"),
@@ -150,23 +148,22 @@
 
         reboursF();
 
-
         /* evenement on click sur logo 2 le faire disparaitre et faire aparaitre les logos reseaux sociaux */
+        function visibility() {
+            let logoDiscord2 = document.getElementById("logoDiscord2")
 
+            logoDiscord2.addEventListener('click', function() {
+                let containerReseaux = document.getElementById("container_reseaux")
 
-        let logoDiscord2 = document.getElementById("logoDiscord2")
+                if (containerReseaux.style.visibility == "hidden") {
+                    containerReseaux.style.visibility = "visible"
+                } else {
+                    containerReseaux.style.visibility = "hidden"
+                };
+            })
+        }
 
-        logoDiscord2.addEventListener('click', function() {
-
-            let containerReseaux = document.getElementById("")
-
-
-            if (1) {
-
-            } else {}
-
-
-        })
+        visibility()
     </script>
 
 </body>

@@ -1,4 +1,14 @@
-.logo {
-    width: 150px;
-    height: auto;
+#logo {
+    width: 20%;
+}
+
+.navbar-brand {
+    position: absolute;
+    top: 10%;
+}
+
+#ul-nav {
+    position: relative;
+    left: 15%;
+    align-items: center;
 }

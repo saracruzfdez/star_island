@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>STARISLAND</title>
-    <link rel="stylesheet" href="..\assets\css\teaser.css">
+    <link rel="stylesheet" href="assets\css\teaser.css">
 </head>
 
 <body>
 
     <!-- logo -->
     <div>
-        <img id="logoStarIsland" src="..\assets\img\starisland.png" alt="">
+        <img id="logoStarIsland" src="assets\img\starisland.png" alt="">
     </div>
 
     <!-- perso background -->
     <div class="parent">
-        <img id="teaser_image" src="..\assets\img\Perso2-removebg-preview.png" alt="">
+        <img id="teaser_image" src="assets\img\Perso2-removebg-preview.png" alt="">
     </div>
 
     <!-- compteur -->
@@ -61,36 +61,36 @@
     <div class="container_reseaux" id="container_reseaux">
         <div class="reseaux">
 
-            <a href=""><img src="..\assets\img\logo_Instagram.png" alt=""></a>
+            <a href=""><img src="assets\img\logo_Instagram.png" alt=""></a>
 
             <a href="">
-                <img src="..\assets\img\logo_facebook.png" alt="">
+                <img src="assets\img\logo_facebook.png" alt="">
             </a>
 
             <a href="">
-                <img src="..\assets\img\Logo_tiktok.png" alt="">
+                <img src="assets\img\Logo_tiktok.png" alt="">
             </a>
 
             <a href="">
-                <img id="discordLogo" src="..\assets\img\logo_discord.png" alt="">
+                <img id="discordLogo" src="assets\img\logo_discord.png" alt="">
             </a>
 
             <a href="">
-                <img src="..\assets\img\logo_twitch.png" alt="">
+                <img src="assets\img\logo_twitch.png" alt="">
             </a>
 
             <a href="">
-                <img src="..\assets\img\logo_twitter.png" alt="">
+                <img src="assets\img\logo_twitter.png" alt="">
             </a>
 
             <a href="">
-                <img src="..\assets\img\logo_youtube.png" alt="">
+                <img src="assets\img\logo_youtube.png" alt="">
             </a>
         </div>
     </div>
 
     <div class="logoDiscord2">
-        <img id="logoDiscord2" src="..\assets\img\logo_discord.png" alt="">
+        <img id="logoDiscord2" src="assets\img\logo_discord.png" alt="">
     </div>
 
     <div id="degrade">

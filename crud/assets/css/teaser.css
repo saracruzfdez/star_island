@@ -125,8 +125,8 @@ html {
 #texte {
     position: absolute;
     top: 120px;
-    left: 65%;
-    width: 30%;
+    left: 60%;
+    width: 35%;
     color: #EA4C6F;
     font-size: 1.5rem;
     font-weight: bold;
@@ -161,7 +161,7 @@ html {
     /* texte */
     #texte {
         position: absolute;
-        top: 300px;
+        top: 305px;
         left: 65px;
         width: 70%;
         color: #EA4C6F;
@@ -174,7 +174,7 @@ html {
     /* Compte à Rebours */
     .box-rebours {
         position: absolute;
-        top: 175px;
+        top: 195px;
         margin: 0 auto;
         height: 100vh;
         display: flex;

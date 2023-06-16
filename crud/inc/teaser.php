@@ -53,7 +53,7 @@
     <!-- texte -->
     <div id="texte">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur augue est, interdum vitae purus sed, tincidunt placerat mi. Aliquam dui ex, iaculis vel mi in, iaculis iaculis dui. In posuere metus eleifend risus euismod, iaculis pulvinar urna scelerisque. Nullam suscipit quam sit amet arcu sagittis fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            STAR'ISLAND... Découvrez le jeu de rôle gratuit qui repousse les limites de l'immersion et de l'interaction. Plongez dans un univers explosif où votre imagination est la seule frontière. Que vous soyez un aventurier courageux ou un voleur rusé, STAR'ISLAND vous offre la liberté de créer votre propre destinée. Rejoignez la communauté francophone et osez vivre une expérience de simulation de vie criminelle inégalée.
         </p>
     </div>
 

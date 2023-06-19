@@ -1,14 +1,18 @@
-#logo {
-    width: 20%;
+#city {
+    width: 100vw;
+    height: auto;
+    left: 0 !important;
 }
 
-.navbar-brand {
+#titre {
     position: absolute;
-    top: 10%;
+    z-index: 50;
+    color: white;
+    font-size: 2.5rem;
+    top: 35%
 }
 
-#ul-nav {
-    position: relative;
-    left: 15%;
-    align-items: center;
+.titre {
+    display: flex;
+    justify-content: center;
 }

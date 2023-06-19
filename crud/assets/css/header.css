@@ -1,0 +1,30 @@
+#logo {
+    width: 20%;
+}
+
+.navbar-brand {
+    z-index: 50;
+    position: absolute;
+    top: 20%;
+}
+
+#ul-nav {
+    position: relative;
+    left: 17%;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.tutoEvent{
+    display: flex;
+    flex-direction: row;
+}
+
+#navbarColor01 {
+    justify-content: space-between;
+}
+
+.nav-link {
+    padding: 0;
+}

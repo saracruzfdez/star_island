@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>STARISLAND</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.2.3/lux/bootstrap.min.css" integrity="sha512-+TCHrZDlJaieLxYGAxpR5QgMae/jFXNkrc6sxxYsIVuo/28nknKtf9Qv+J2PqqPXj0vtZo9AKW/SMWXe8i/o6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets\bootstrap\scss\bootstrap.css">
     <link rel="stylesheet" href="assets\css\index.css">
+    <link rel="stylesheet" href="assets\css\header.css">
+    <link rel="stylesheet" href="assets\css\footerHome.css">
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-2">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
             <div class="container-fluid">
                 <a class="navbar-brand p-0" href=""><img id="logo" src="assets\img\starisland.png"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,23 +53,36 @@
                                 </div>
                             </li>
                         <?php endif;
-                                  ?>
+                        ?>
                                   -->
 
                     </ul>
-                    <?php if (connect()) :           ?>
+
+                    <!-- <?php if (connect()) :           ?>
                         <a href="<?= BASE_PATH . '?a=dis'; ?>" class="btn btn-primary">Déconnexion</a>
                     <?php else :           ?>
                         <a href="<?= BASE_PATH . 'security/login.php'; ?>" class="btn btn-primary">Connexion</a>
                         <a href="<?= BASE_PATH . 'security/register.php'; ?>" class="btn btn-success">Inscription</a>
-                    <?php endif;        ?>
+                    <?php endif;        ?> -->
+
+                    <div id="tutoEvent">
+                        <a class="nav-link text-white tutoEvent align-items-center" id ="nav-link" href="#">
+                            <img class="m-1" id="home" src="assets\img\tuto.png" alt="">
+                            <p class="m-1">TUTORIELS</p>
+                        </a>
+                        <a class="nav-link text-white tutoEvent" href="#">
+                            <img class="m-1" id="home" src="assets\img\event.png" alt="">
+                            <p class="m-1">EVENT</p>
+                        </a>
+                    </div>
 
                 </div>
             </div>
         </nav>
     </header>
-    <main class="container">
-        <?php if (isset($_SESSION['messages']) && !empty($_SESSION['messages'])) :           ?>
+
+    <main>
+        <!-- <?php if (isset($_SESSION['messages']) && !empty($_SESSION['messages'])) :           ?>
             <?php foreach ($_SESSION['messages'] as $type => $messages) :
             ?>
                 <?php foreach ($messages as $key => $message) :           ?>
@@ -77,4 +93,4 @@
         <?php unset($_SESSION['messages'][$type][$key]);
                 endforeach;
             endforeach;
-        endif;           ?>
+        endif;           ?> -->

@@ -1,18 +1,47 @@
+@font-face {
+    font-family: 'Iceland-Regular';
+    src: url("../polices/Iceland-Regular.ttf") format("truetype");
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 #city {
     width: 100vw;
     height: auto;
-    left: 0 !important;
 }
 
 #titre {
     position: absolute;
     z-index: 50;
     color: white;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     top: 35%
 }
 
 .titre {
     display: flex;
     justify-content: center;
+}
+
+#carouselExampleIndicators {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+}
+
+.press {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10%;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.scf-carousel {
+    height: 300px;
 }

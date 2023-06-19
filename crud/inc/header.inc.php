@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>STARISLAND</title>
-
     <link rel="stylesheet" href="assets\bootstrap\scss\bootstrap.css">
     <link rel="stylesheet" href="assets\css\index.css">
     <link rel="stylesheet" href="assets\css\header.css">
@@ -66,7 +65,7 @@
                     <?php endif;        ?> -->
 
                     <div id="tutoEvent">
-                        <a class="nav-link text-white tutoEvent align-items-center" id ="nav-link" href="#">
+                        <a class="nav-link text-white tutoEvent align-items-center" id="nav-link" href="#">
                             <img class="m-1" id="home" src="assets\img\tuto.png" alt="">
                             <p class="m-1">TUTORIELS</p>
                         </a>
@@ -75,7 +74,6 @@
                             <p class="m-1">EVENT</p>
                         </a>
                     </div>
-
                 </div>
             </div>
         </nav>
@@ -91,6 +89,6 @@
                     </div>
 
         <?php unset($_SESSION['messages'][$type][$key]);
-                endforeach;
-            endforeach;
-        endif;           ?> -->
+                        endforeach;
+                    endforeach;
+                endif;           ?> -->

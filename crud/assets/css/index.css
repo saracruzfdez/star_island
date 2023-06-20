@@ -7,7 +7,7 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#city {
+.scf-city {
     width: 100vw;
     height: auto;
 }
@@ -17,7 +17,8 @@ body {
     z-index: 50;
     color: white;
     font-size: 2.7rem;
-    top: 35%
+    font-weight: bold;
+    top: 30%
 }
 
 .titre {
@@ -27,21 +28,80 @@ body {
 
 #carouselExampleIndicators {
     position: absolute;
-    top: 55%;
+    top: 40%;
     width: 100%;
 }
 
+#carouselExampleIndicators2 {
+    width: 200px;
+    height: 200px;
+}
 .press {
     display: flex;
     justify-content: center;
-    padding-bottom: 10%;
+    padding-bottom: 15%;
     text-align: center;
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding-left: 15%;
     padding-right: 15%;
 }
 
+.scf-form {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 15%;
+}
+
 .scf-carousel {
-    height: 300px;
+    height: 320px;
+}
+
+#scf-topServer {
+    text-align: center;
+    width: 65%;
+    padding-bottom: 2%;
+}
+
+.etoile {
+    height: 20px;
+    padding-bottom: 5px;
+}
+
+/* Diapo */
+.imageItem {
+    width: 600px;
+    height: 500px;
+}
+
+.scf-diaporama {
+width: 600px;
+height: 250px;
+overflow: hidden;
+margin: 0px auto;
+}
+
+.scf-imagesDiapo {
+position: relative;
+width: 2000px;
+float:left;
+animation : accueil 5s infinite;
+}
+
+@keyframes accueil {
+    0%{left: 0px;} 
+    23%{left: 0px;} 
+    26%{left: 0px;} 
+    56%{left: -600px;} 
+    63%{left: -600px;} 
+    66%{left: -600px;} 
+    76%{left: -1225px;} 
+    83%{left: -1225px;} 
+    86%{left: -1225px;} 
+    93%{left: 0px;} 
+    960%{left: 0px;} 
+    100%{left: 0px;} 
 }

@@ -10,12 +10,16 @@
     <link rel="stylesheet" href="assets\css\index.css">
     <link rel="stylesheet" href="assets\css\header.css">
     <link rel="stylesheet" href="assets\css\footerHome.css">
+    <link rel="stylesheet" href="assets\css\reseaux.css">
 </head>
 
-<body>
+<body class="bg-dark">
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
+        <!-- RENDRE FIXE LA NAVBAR -->
+        <!-- RENDRE FIXE LA NAVBAR -->
+        <!-- RENDRE FIXE LA NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
             <div class="container-fluid">
                 <a class="navbar-brand p-0" href=""><img id="logo" src="assets\img\starisland.png"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">

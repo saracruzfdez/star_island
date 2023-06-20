@@ -1,0 +1,33 @@
+/* reseaux */
+.container_reseaux {
+    visibility: hidden;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top : 65%;
+    z-index: 25;
+}
+
+.reseaux {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 0.5em #8a8a8a;
+    border-radius: 25px;
+}
+
+.reseaux img {
+    margin: 0 7px;
+}
+
+.logoDiscord2 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    z-index: 50;
+}

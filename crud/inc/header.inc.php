@@ -7,9 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>STARISLAND</title>
     <link rel="stylesheet" href="assets\bootstrap\scss\bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="assets\css\index.css">
     <link rel="stylesheet" href="assets\css\header.css">
-    <link rel="stylesheet" href="assets\css\footerHome.css">
+    <link rel="stylesheet" href="assets\css\footer.css">
     <link rel="stylesheet" href="assets\css\reseaux.css">
 </head>
 

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets\css\footer.css">
     <link rel="stylesheet" href="assets\css\reseaux.css">
     <link rel="stylesheet" href="assets\css\galerie.css">
+    <link rel="stylesheet" href="assets\css\vip.css">
 </head>
 
 <body class="bg-dark">

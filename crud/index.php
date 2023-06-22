@@ -36,29 +36,29 @@ require_once 'inc/header.inc.php';
 
         <div class="scf-carousel carousel-item">
             <!-- slick carousel -->
-            <div class="w-50 mx-auto ">
+            <div class="w-50 mx-auto" style=>
                 <div class="multiple-items ">
                     <div class="" style="height: 300px; width: 750px;">
-                        <img class="d-block w-100" src="assets\img\koke-mayayo-thevisualkiller-I7UyY4EgFSk-unsplash.jpg" alt="First slide">
+                        <img class="d-block h-75" src="assets\img\koke-mayayo-thevisualkiller-I7UyY4EgFSk-unsplash.jpg" alt="First slide">
                     </div>
                     <div class="" style="height: 300px; width: 750px;">
-                        <img class="d-block w-100 h" src="assets\img\kenny-eliason-JXg7Yq5b1wE-unsplash.jpg" alt="Third slide">
+                        <img class="d-block h-75" src="assets\img\kenny-eliason-JXg7Yq5b1wE-unsplash.jpg" alt="Third slide">
                     </div>
                     <div class="" style="height: 300px; width: 750px;">
-                        <img class="d-block w-100 h" src="assets\img\jack-finnigan-aEkk0KxvPpg-unsplash.jpg">
+                        <img class="d-block h-75" src="assets\img\jack-finnigan-aEkk0KxvPpg-unsplash.jpg">
                     </div>
                     <div class="" style="height: 300px; width: 750px;">
-                        <img class="d-block w-100 h" src="assets\img\lala-miklos-qxstzQ__HMk-unsplash.jpg">
+                     <img class="d-block h-75"  src="assets\img\lala-miklos-qxstzQ__HMk-unsplash.jpg">
                     </div>
                     <div class="" style="height: 300px; width: 750px;">
-                        <img class="d-block w-100 h" src="assets\img\nathan-dumlao-xxzeV1aiSY8-unsplash.jpg">
+                     <img class="d-block h-75"  src="assets\img\nathan-dumlao-xxzeV1aiSY8-unsplash.jpg">
                     </div>
                     <div class="" style="height: 300px; width: 750px;">
-                        <img class="d-block w-100 h" src="assets\img\roberto-nickson-wdCkqK1oRIc-unsplash.jpg" alt="Third slide">
+                     <img class="d-block h-75"  src="assets\img\roberto-nickson-wdCkqK1oRIc-unsplash.jpg" alt="Third slide">
                     </div>
                 </div>
             </div>
-            <!-- FIN slick carousel -->
+            <!-- Slick carousel END -->
         </div>
 
         <div class="scf-carousel carousel-item">
@@ -82,13 +82,15 @@ require_once 'inc/header.inc.php';
                 </div>
             </form>
         </div>
-
     </div>
 </div>
+<!-- Carousel End -->
 
 <!-- reseaux NE MARCHE PASSSS !!!! -->
 <!-- reseaux NE MARCHE PASSSS !!!! -->
 <!-- reseaux NE MARCHE PASSSS !!!! -->
+
+<!-- Social media START -->
 <div class="container_reseaux" id="container_reseaux">
     <div class="reseaux">
 
@@ -123,6 +125,7 @@ require_once 'inc/header.inc.php';
 <div class="logoDiscord2">
     <img id="logoDiscord2" src="assets\img\logo_discord.png" alt="">
 </div>
+<!-- Social media END -->
 
 <!-- Avatars -->
 <section class="avatars">
@@ -179,11 +182,12 @@ require_once 'inc/header.inc.php';
         </div>
     </div>
 </section>
+<!-- Avatars END -->
 
 <!-- Form -->
 <section class="form">
     <form class="scf-form">
-        <div class="form-group">
+        <div class="form-group scf-formScore">
             <label for="exampleFormControlTextarea1">VOTRE AVIS NOUS INTERESSE !</label>
             <div>
                 <img class="etoile" src="assets\img\yellowStar.png" alt="">
@@ -199,5 +203,6 @@ require_once 'inc/header.inc.php';
         </div>
     </form>
 </section>
+<!-- Form END -->
 
 <?php require_once 'inc/footer.inc.php';          ?>

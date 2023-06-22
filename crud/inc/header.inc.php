@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="assets\bootstrap\scss\bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="assets\css\index.css">
+    <link rel="stylesheet" href="assets\css\commun.css">
     <link rel="stylesheet" href="assets\css\header.css">
     <link rel="stylesheet" href="assets\css\footer.css">
     <link rel="stylesheet" href="assets\css\reseaux.css">
+    <link rel="stylesheet" href="assets\css\galerie.css">
 </head>
 
 <body class="bg-dark">
@@ -36,7 +37,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">GALLERIE</a>
+                            <a class="nav-link text-white" href="crud\galerie.php">GALLERIE</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">DEVENIR VIP</a>

@@ -1,0 +1,12 @@
+#carouselExampleControls {
+    position: absolute;
+    top: 44%;
+    width: 100%;
+    z-index: 600;
+    justify-content: center;
+    text-align: center;
+}
+
+.scf-galerieItemImage {
+    width: 45vw;
+}

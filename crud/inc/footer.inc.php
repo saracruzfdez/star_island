@@ -22,7 +22,7 @@
 <script type="text/javascript">
   $('.multiple-items').slick({
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 3,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 2000,
@@ -35,7 +35,7 @@
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- FIN bootstrap JS -->
 
-<script src="assets/reseaux.js"></script>
+<script src="assets\js\reseaux.js"></script>
 
 </body>
 

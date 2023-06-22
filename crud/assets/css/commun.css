@@ -19,7 +19,7 @@ body {
     color: white;
     font-size: 2.7rem;
     font-weight: bold;
-    top: 27%
+    top: 25%
 }
 
 .titre {
@@ -32,13 +32,30 @@ body {
     position: absolute;
     top: 44%;
     width: 100%;
+    left:0.4%
 }
 
 .scf-carousel {
-    height: 350px;
+    height: 290px;
 }
 
-/* Carousel Presentation */
+.carousel-indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #ea4c6f;
+    border-radius: 50%;
+    opacity: 0.5;
+    border-top: 10px solid transparent;
+    transition: opacity 0.6s ease;
+}
+
+/* Carousel Presentation index */
 .press {
     font-family: 'Iceland-Regular';
     display: flex;
@@ -51,7 +68,7 @@ body {
     padding-right: 15%;
 }
 
-/* Carousel Form */
+/* Carousel Form index */
 .scf-form {
     text-align: center;
     color: white;
@@ -63,9 +80,11 @@ body {
 
 #scf-topServer {
     text-align: center;
-    width: 65%;
-    padding-bottom: 2%;
+    width: 55%;
+    padding-bottom: 1%;
 }
+
+
 
 .etoile {
     height: 20px;
@@ -78,7 +97,7 @@ body {
     width: 900px;
     position: absolute;
     left: 19%;
-    top: 110%;
+    top: 130%;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -134,14 +153,16 @@ body {
     right: 5px;
 }
 
-#avatarContent1, #avatarContent2 {
+#avatarContent1,
+#avatarContent2 {
     width: 80%;
     position: relative;
     left: 30%;
     top: 10%
 }
 
-#avatarContent3, #avatarContent4 {
+#avatarContent3,
+#avatarContent4 {
     width: 80%;
     position: relative;
     left: 10%;
@@ -150,7 +171,7 @@ body {
 
 /* Form */
 .form {
-    position:absolute;
-    top: 160%;
+    position: absolute;
+    top: 210%;
     width: 100%;
 }

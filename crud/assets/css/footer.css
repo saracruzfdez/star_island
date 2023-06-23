@@ -3,5 +3,6 @@ footer {
     height: 75px;
     width: 100vw;
     color: white;
+    position: absolute;
+    z-index: 800;
 }
-

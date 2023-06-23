@@ -2,25 +2,36 @@
     position: absolute;
     z-index: 700;
     color: aliceblue;
-    width: 70%;
-    top: 40%;
+    width: 80%;
+    top: 27%;
     justify-content: center;
     text-align: justify;
 }
 
-.vip1, .vip2 {
+.vip1,
+.vip2 {
     display: flex;
     flex-direction: row;
     text-align: center;
     align-items: center;
-
+    position: relative;
 }
 
-.scf-textVip1, .scf-textVip2 {
-    width: 600px;
+.scf-textVip1,
+.scf-textVip2 {
+    width: 50%;
 }
 
 .vip1 {
-    padding-bottom: 100px;
-    right: 20%;
+    left: 37%;
+}
+
+.vip2 {
+    right: -15%;
+    margin-top: 10%;
+}
+
+.scf-imgVip1,
+.scf-imgVip2 {
+    height: 400px;
 }

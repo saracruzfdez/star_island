@@ -37,6 +37,8 @@
 
 <script src="assets\js\reseaux.js"></script>
 
+<script src="assets\js\equipe.js"></script>
+
 </body>
 
 </html>

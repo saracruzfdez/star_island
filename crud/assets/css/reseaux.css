@@ -1,11 +1,12 @@
 /* reseaux */
 .container_reseaux {
+    position: absolute;
+    top: 20px;
     visibility: hidden;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     top : 89%;
     z-index: 25;
 }

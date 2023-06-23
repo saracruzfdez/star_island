@@ -13,7 +13,7 @@ require_once 'inc/header.inc.php';
 
 <div class="titre">
     <h1 id="titre">
-        VIP
+        DEVENIR VIP
     </h1>
 </div>
 
@@ -37,40 +37,7 @@ require_once 'inc/header.inc.php';
 </div>
 
 <!-- Social media START -->
-<div class="container_reseaux" id="container_reseaux">
-    <div class="reseaux">
-
-        <a href=""><img src="assets\img\logo_Instagram.png" alt=""></a>
-
-        <a href="">
-            <img src="assets\img\logo_facebook.png" alt="">
-        </a>
-
-        <a href="">
-            <img src="assets\img\Logo_tiktok.png" alt="">
-        </a>
-
-        <a href="">
-            <img id="discordLogo" src="assets\img\logo_discord.png" alt="">
-        </a>
-
-        <a href="">
-            <img src="assets\img\logo_twitch.png" alt="">
-        </a>
-
-        <a href="">
-            <img src="assets\img\logo_twitter.png" alt="">
-        </a>
-
-        <a href="">
-            <img src="assets\img\logo_youtube.png" alt="">
-        </a>
-    </div>
-</div>
-
-<div class="logoDiscord2">
-    <img id="logoDiscord2" src="assets\img\logo_discord.png" alt="">
-</div>
+<?php require_once 'inc/reseaux.inc.php' ?>
 <!-- Social media END -->
 
 <?php require_once 'inc/footer.inc.php';          ?>

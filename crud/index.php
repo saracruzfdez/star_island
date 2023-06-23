@@ -86,45 +86,8 @@ require_once 'inc/header.inc.php';
 </div>
 <!-- Carousel End -->
 
-<!-- reseaux NE MARCHE PASSSS !!!! -->
-<!-- reseaux NE MARCHE PASSSS !!!! -->
-<!-- reseaux NE MARCHE PASSSS !!!! -->
-
 <!-- Social media START -->
-<div class="container_reseaux" id="container_reseaux">
-    <div class="reseaux">
-
-        <a href=""><img src="assets\img\logo_Instagram.png" alt=""></a>
-
-        <a href="">
-            <img src="assets\img\logo_facebook.png" alt="">
-        </a>
-
-        <a href="">
-            <img src="assets\img\Logo_tiktok.png" alt="">
-        </a>
-
-        <a href="">
-            <img id="discordLogo" src="assets\img\logo_discord.png" alt="">
-        </a>
-
-        <a href="">
-            <img src="assets\img\logo_twitch.png" alt="">
-        </a>
-
-        <a href="">
-            <img src="assets\img\logo_twitter.png" alt="">
-        </a>
-
-        <a href="">
-            <img src="assets\img\logo_youtube.png" alt="">
-        </a>
-    </div>
-</div>
-
-<div class="logoDiscord2">
-    <img id="logoDiscord2" src="assets\img\logo_discord.png" alt="">
-</div>
+<?php require_once 'inc/reseaux.inc.php' ?>
 <!-- Social media END -->
 
 <!-- Avatars -->
@@ -190,10 +153,10 @@ require_once 'inc/header.inc.php';
         <div class="form-group scf-formScore">
             <label for="exampleFormControlTextarea1">VOTRE AVIS NOUS INTERESSE !</label>
             <div>
-                <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                <img class="etoile" src="assets\img\yellowStar.png" alt="">
+                <img class="etoile" src="assets\img\blackStar.png" alt="">
+                <img class="etoile" src="assets\img\blackStar.png" alt="">
+                <img class="etoile" src="assets\img\blackStar.png" alt="">
+                <img class="etoile" src="assets\img\blackStar.png" alt="">
                 <img class="etoile" src="assets\img\blackStar.png" alt="">
             </div>
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ecrivez votre commentaire"></textarea>

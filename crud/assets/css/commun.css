@@ -10,6 +10,7 @@ body {
 
 .scf-city {
     width: 100vw;
+    height: auto;
 }
 
 #titre {
@@ -96,7 +97,7 @@ body {
     width: 900px;
     position: absolute;
     left: 19%;
-    top: 130%;
+    top: 115%;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -171,6 +172,6 @@ body {
 /* Form */
 .form {
     position: absolute;
-    top: 210%;
+    top: 180%;
     width: 100%;
 }

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets\css\reseaux.css">
     <link rel="stylesheet" href="assets\css\galerie.css">
     <link rel="stylesheet" href="assets\css\vip.css">
+    <link rel="stylesheet" href="assets\css\equipe.css">
 </head>
 
 <body class="bg-dark">

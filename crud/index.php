@@ -93,7 +93,7 @@ require_once 'inc/header.inc.php';
 <!-- Avatars -->
 <section class="avatars">
     <div class="avatarItem" id="avatarItem1">
-        <img class="avatarItemImage" id="avatarItemImage1" src="assets\img\Profile-Male-PNG.png" alt="">
+        <img class="avatarItemImage" id="avatarItemImage1" src="assets\img\portrait1.jpg" alt="">
         <div id="avatarContent1">
             <div>
                 <img class="etoile" src="assets\img\yellowStar.png" alt="">
@@ -106,7 +106,7 @@ require_once 'inc/header.inc.php';
         </div>
     </div>
     <div class="avatarItem" id="avatarItem2">
-        <img class="avatarItemImage" id="avatarItemImage2" src="assets\img\Profile-Male-PNG.png" alt="">
+        <img class="avatarItemImage" id="avatarItemImage2" src="assets\img\portrait2.jpg" alt="">
         <div id="avatarContent2">
             <div>
                 <img class="etoile" src="assets\img\yellowStar.png" alt="">
@@ -119,7 +119,7 @@ require_once 'inc/header.inc.php';
         </div>
     </div>
     <div class="avatarItem" id="avatarItem3">
-        <img class="avatarItemImage" id="avatarItemImage3" src="assets\img\Profile-Male-PNG.png" alt="">
+        <img class="avatarItemImage" id="avatarItemImage3" src="assets\img\portrait3.jpg" alt="">
         <div id="avatarContent3">
             <div>
                 <img class="etoile" src="assets\img\yellowStar.png" alt="">
@@ -132,7 +132,7 @@ require_once 'inc/header.inc.php';
         </div>
     </div>
     <div class="avatarItem" id="avatarItem4">
-        <img class="avatarItemImage" id="avatarItemImage4" src="assets\img\Profile-Male-PNG.png" alt="">
+        <img class="avatarItemImage" id="avatarItemImage4" src="assets\img\portrait4.jpg" alt="">
         <div id="avatarContent4">
             <div>
                 <img class="etoile" src="assets\img\yellowStar.png" alt="">

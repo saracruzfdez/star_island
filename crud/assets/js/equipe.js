@@ -1,16 +1,28 @@
-       /* evenement on click sur profil image et faire aparaitre les logos reseaux sociaux */
-       function visibility2() {
-        let profilPicture = document.getElementByClass("equipeItem")
+/* evenement on click sur profil image et faire aparaitre les logos reseaux sociaux */
+function visibility2() {
 
-        profilPicture.addEventListener('click', function() {
-            let profilPictureReseaux = document.getElementByClass("equipeItemReseaux")
+    let profilePictures = document.getElementsByClassName("equipeItem")
 
-            if (profilPictureReseaux.style.visibility == "hidden") {
-                profilPictureReseaux.style.visibility = "visible"
+    for (var i = 0; i < profilePictures.length; i++) {
+        // Let's store the current Element in a dedicated var
+        const profilePicture = profilePictures[i]
+
+        // Add an on click listener on each elements
+        profilePicture.addEventListener('click', function () {
+
+            // Return the unique div element with classname equipeItemReseaux
+            const profileItemsReseaux = profilePicture.getElementsByClassName("equipeItemReseaux")
+
+            const profileItemReseaux = profileItemsReseaux[0]
+
+            // Toggle visibility on the network items
+            if (profileItemReseaux.style.visibility == "hidden") {
+                profileItemReseaux.style.visibility = "visible"
             } else {
-                profilPictureReseaux.style.visibility = "hidden"
+                profileItemReseaux.style.visibility = "hidden"
             };
         })
     }
+}
 
-    visibility2()
+visibility2()

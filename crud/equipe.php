@@ -39,9 +39,25 @@ require_once 'inc/header.inc.php';
 
     <div class="equipeItem">
         <img src="assets\img\profil1.jpg" alt="">
+        <div class="equipeItemReseaux">
+            <div>
+                <img src="assets\img\logo_twitch.png" alt="">
+            </div>
+            <div>
+                <img src="assets\img\discord.png" alt="">
+            </div>
+        </div>
     </div>
     <div class="equipeItem">
         <img src="assets\img\profil4.png" alt="">
+        <div class="equipeItemReseaux">
+            <div>
+                <img src="assets\img\logo_twitch.png" alt="">
+            </div>
+            <div>
+                <img src="assets\img\discord.png" alt="">
+            </div>
+        </div>
     </div>
     <div class="equipeItem">
         <img src="assets\img\profil2.jpg" alt="">
@@ -67,24 +83,9 @@ require_once 'inc/header.inc.php';
     <div class="equipeItem">
         <img src="assets\img\profil11.jpg" alt="">
     </div>
-    <div class="equipeItem">
-        <img src="assets\img\profil6.png" alt="">
-    </div>
 
 </section>
 
-<section class="equipeReseaux">
-
-    <div class="equipeItemReseaux">
-        <div>
-            <img src="assets\img\logo_twitch.png" alt="">
-        </div>
-        <div>
-            <img src="assets\img\discord.png" alt="">
-        </div>
-    </div>
-
-</section>
 
 <!-- Social media START -->
 <?php require_once 'inc/reseaux.inc.php' ?>

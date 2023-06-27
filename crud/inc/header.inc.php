@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="assets\css\galerie.css">
     <link rel="stylesheet" href="assets\css\vip.css">
     <link rel="stylesheet" href="assets\css\equipe.css">
+    <link rel="stylesheet" href="assets\css\event.css">
+    <link rel="stylesheet" href="assets\css\compteur.css">
 </head>
 
 <body class="bg-dark">

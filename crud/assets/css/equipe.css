@@ -46,23 +46,16 @@
     border-radius: 50%;
 }
 
-.equipeReseaux {
-    display: flex;
-    position: absolute;
-    flex-wrap: wrap;
-    justify-content: center;
-    top: 50%;
-    gap: 3rem;
-    padding: 5px 300px 5px 300px;
-}
-
 .equipeItemReseaux {
-      width: 5rem;
-      visibility: hidden;
+    visibility: hidden; 
+    position: absolute;
+    left: -40px;
+    top: 10px;
 }
 
 .equipeItemReseaux img {
     height: 2rem;
+    width: 2rem;
     margin: 5px;
     border: 2px solid #ffffff;
     border-radius: 50%;

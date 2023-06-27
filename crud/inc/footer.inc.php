@@ -27,7 +27,6 @@
     autoplay: true,
     autoplaySpeed: 2000,
   });
-
 </script>
 <!-- FIN slick JS -->
 
@@ -38,6 +37,8 @@
 <script src="assets\js\reseaux.js"></script>
 
 <script src="assets\js\equipe.js"></script>
+
+<script src="assets\js\compteur.js"></script>
 
 </body>
 

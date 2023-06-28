@@ -6,3 +6,20 @@ footer {
     position: absolute;
     z-index: 800;
 }
+
+/*////////// MOBILE FIRST //////////*/
+@media (max-width: 634px) {
+    footer {
+        background-color: black;
+        height: 75px;
+        width: 100vw;
+        color: white;
+        z-index: 800;
+        font-size: 0.8rem;
+    }
+
+    footer img{
+        height: 50px;
+    }
+
+}

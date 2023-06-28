@@ -14,6 +14,20 @@ body {
     z-index: auto;
 }
 
+.fond {
+    background-image: url("../img/decor1.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fond2 {
+    background-image: url("../img/decor2.png");
+    height: 115vh;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
 #titre {
     position: absolute;
     z-index: 50;
@@ -33,7 +47,7 @@ body {
     position: absolute;
     top: 44%;
     width: 100%;
-    left:0.4%
+    left: 0.4%
 }
 
 .scf-carousel {
@@ -173,4 +187,113 @@ body {
     position: absolute;
     top: 180%;
     width: 100%;
+}
+
+/*////////// MOBILE FIRST //////////*/
+@media (max-width: 634px) {
+
+    #titre {
+        position: absolute;
+        z-index: 50;
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        top: 15%;
+        text-align: center;
+    }
+
+    /* Carousel */
+    #carouselExampleIndicators {
+        position: absolute;
+        top: 35%;
+        width: 100%;
+        left: 0.4%;
+    }
+
+    /* Carousel Presentation index */
+    .press {
+        font-family: 'Iceland-Regular';
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5%;
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .scf-carousel {
+        height: 320px;
+    }
+
+    .carousel-indicators li {
+        box-sizing: content-box;
+        flex: 0 1 auto;
+        width: 10px;
+        height: 10px;
+        margin-right: 3px;
+        margin-left: 3px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: #ea4c6f;
+        border-radius: 50%;
+        opacity: 0.5;
+        border-top: 10px solid transparent;
+        transition: opacity 0.6s ease;
+    }
+
+    /* Avatars */
+    .avatars {
+        height: 300px;
+        width: 250px;
+        position: absolute;
+        left: 19%;
+        top: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #avatarItem1 {
+        top: 0px;
+        left: -20px
+    }
+
+    #avatarItem2 {
+        top: 150px;
+        left: -20px
+    }
+
+    #avatarItem3 {
+        top: 300px;
+        left: -20px
+    }
+
+    #avatarItem4 {
+        top: 450px;
+        left: -20px
+    }
+
+    /* Form */
+    .form {
+        position: absolute;
+        top: 200%;
+        width: 100%;
+    }
+
+    .scf-form {
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+        padding-left: 8%;
+        padding-right: 8%;
+    }
+
+    .fond2 {
+        background-image: url("../img/decor2.png");
+        height: 140vh;
+        background-repeat: no-repeat;
+        background-size: cover
+    }
+
 }

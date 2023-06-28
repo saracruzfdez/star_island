@@ -34,3 +34,8 @@ header{
 .nav-link {
     padding: 0;
 }
+
+/*////////// MOBILE FIRST //////////*/
+@media (max-width: 634px) {
+
+}

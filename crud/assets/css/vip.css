@@ -1,37 +1,59 @@
+.fond {
+    background-image: url("../img/decor5.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#titreVIP {
+    color: white;
+    font-size: 2.7rem;
+    font-weight: bold;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
 .vip {
-    position: absolute;
-    z-index: 700;
     color: aliceblue;
     width: 80%;
-    top: 27%;
     justify-content: center;
     text-align: justify;
-}
-
-.vip1,
-.vip2 {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    position: relative;
-}
-
-.scf-textVip1,
-.scf-textVip2 {
-    width: 50%;
+    margin: auto;
 }
 
 .vip1 {
-    left: 37%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: end;
+    margin-right: 3%;
 }
 
 .vip2 {
-    right: -15%;
-    margin-top: 10%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.vip2 {
+    margin-top: -14%;
+    margin-left: 9%;
 }
 
 .scf-imgVip1,
 .scf-imgVip2 {
-    height: 400px;
+    height: 350px;
+}
+
+.scf-textVip1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: 40%;
+}
+
+.scf-textVip2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    width: 45%;
 }

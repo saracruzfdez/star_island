@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>STARISLAND</title>
     <link rel="stylesheet" href="assets\bootstrap\scss\bootstrap.css">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
+
     <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="assets\css\commun.css">
@@ -23,16 +26,13 @@
 <body class="bg-dark">
 
     <header>
-        <!-- RENDRE FIXE LA NAVBAR -->
-        <!-- RENDRE FIXE LA NAVBAR -->
-        <!-- RENDRE FIXE LA NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-            <div class="container-fluid">
+         
                 <a class="navbar-brand p-0" href=""><img id="logo" src="assets\img\starisland.png"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler test" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarColor01">
+                <div class="collapse navbar-collapse " id="navbarColor01">
                     <ul id="ul-nav" class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link active" href="<?= BASE_PATH; ?>">
@@ -86,7 +86,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            
         </nav>
     </header>
 

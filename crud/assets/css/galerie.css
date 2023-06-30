@@ -10,3 +10,20 @@
 .scf-galerieItemImage {
     width: 45vw;
 }
+
+.fondGalerie {
+    background-image: url("../img/decor4.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*////////// MOBILE FIRST //////////*/
+@media (max-width: 634px) {
+    .fondGalerie {
+        background-image: url("../img/decor4.png");
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+ }

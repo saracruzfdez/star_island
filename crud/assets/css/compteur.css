@@ -41,3 +41,32 @@
 #seconde_label {
     visibility: hidden;
 }
+
+/*////////// MOBILE FIRST //////////*/
+@media (max-width: 634px) {
+
+    #jour,
+    #heure,
+    #minute,
+    #seconde {
+        font-size: 3rem;
+    }
+
+    #separator {
+        font-size: 3rem;
+    }
+
+    .box_jour,
+    .box_heure,
+    .box_minute,
+    .box_seconde {
+        padding: 1px;
+    }
+
+ 
+.box-rebours {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+}

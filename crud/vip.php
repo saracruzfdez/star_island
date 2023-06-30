@@ -10,13 +10,11 @@ require_once 'inc/header.inc.php';
 // }
 ?>
 <div class="fond">
-    <div>
-        <h1 id="titreVIP">
+    <div class="titre">
+        <h1 id="titre">
             DEVENIR VIP
         </h1>
     </div>
-
-
     <!-- VIP Section -->
     <div class="vip">
         <div class="vip1">
@@ -25,7 +23,9 @@ require_once 'inc/header.inc.php';
             </p>
             <img class="pl-4 scf-imgVip1" src="assets\img\Group 6.png" alt="">
         </div>
+    </div>
 
+    <div class="vip">
         <div class="vip2">
             <img class="pr-4 scf-imgVip2" src="assets\img\Group 5.png" alt="">
             <p class="scf-textVip2">
@@ -33,6 +33,7 @@ require_once 'inc/header.inc.php';
         </div>
     </div>
 </div>
+
 <!-- Social media START -->
 <?php require_once 'inc/reseaux.inc.php' ?>
 <!-- Social media END -->

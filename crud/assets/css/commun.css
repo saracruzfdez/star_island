@@ -23,7 +23,7 @@ body {
 
 .fond2 {
     background-image: url("../img/decor2.png");
-    height: 115vh;
+    height: 120vh;
     background-repeat: no-repeat;
     background-size: cover
 }
@@ -277,7 +277,7 @@ body {
     /* Form */
     .form {
         position: absolute;
-        top: 200%;
+        top: 210%;
         width: 100%;
     }
 
@@ -291,7 +291,7 @@ body {
 
     .fond2 {
         background-image: url("../img/decor2.png");
-        height: 140vh;
+        height: 125vh;
         background-repeat: no-repeat;
         background-size: cover
     }

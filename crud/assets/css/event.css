@@ -59,15 +59,28 @@
 
     #eventContent {
         width: 100%;
-
     }
 
     .compteur {
         width: 100%;
     }
 
-    .event img{
+    .event img {
         width: 90%;
         margin-left: 9%;
+    }
+
+    #titreEvent2 {
+        padding-top: 22%;
+    }
+
+    .fondEvent {
+        height: 160vh;
+    }
+
+    #content {
+        padding-top: 5%;
+        padding-left: 5%;
+        width: 100%;
     }
 }

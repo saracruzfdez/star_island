@@ -1,4 +1,5 @@
 <?php require_once '../config/function.php';
+require_once '../inc/backheader.inc.php';
 
 
 if (!empty($_POST)) {
@@ -15,10 +16,10 @@ if (!empty($_POST)) {
 
             execute("INSERT INTO media_type (title_media_type) VALUES (:title_media_type)", array(
                 ':title_media_type' => $_POST['title_media_type']
-            ));
+            ),);
 
             $_SESSION['messages']['success'][] = 'Média type ajouté';
-            header('location:./media_type.php');
+            header('Location: media_type.php');
             exit();
         } // fin soumission en insert
 
@@ -29,9 +30,11 @@ if (!empty($_POST)) {
                 ':title' => $_POST['title_media_type']
             ));
 
+
             $_SESSION['messages']['success'][] = 'Média type modifié';
-            header('location:./media_type.php');
+            header('Location: media_type.php');
             exit();
+
         } // fin soumission modification
     } // fin si pas d'erreur
 
@@ -59,17 +62,17 @@ if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'd
 
     if ($success) {
         $_SESSION['messages']['success'][] = 'Type supprimé';
-        header('location:./media_type.php');
+        header('Location: media_type.php');
         exit;
+        
     } else {
         $_SESSION['messages']['danger'][] = 'Problème de traitement, veuillez réitérer';
-        header('location:./media_type.php');
+        header('Location: media_type.php');
         exit;
     }
 }
 
 
-require_once '../inc/backheader.inc.php';
 ?>
 
 

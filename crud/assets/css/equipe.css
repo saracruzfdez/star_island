@@ -17,6 +17,13 @@
     align-items: center;
 }
 
+.fondStaff {
+    background-image: url("../img/decor6.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .red {
     width: 2px;
     background-color: #E13374;
@@ -47,7 +54,7 @@
 }
 
 .equipeItemReseaux {
-    visibility: hidden; 
+    visibility: hidden;
     position: absolute;
     left: -40px;
     top: 10px;
@@ -60,4 +67,49 @@
     border: 2px solid #ffffff;
     border-radius: 50%;
     opacity: 75%;
+}
+
+/*////////// MOBILE FIRST //////////*/
+@media (max-width: 634px) {
+
+    .navBarStaff {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 25%;
+        width: 40%;
+        height: 35%;
+        left: 30%;
+        border-radius: 30px;
+        opacity: 50%;
+        color: rgb(173, 8, 8);
+        justify-content: center;
+    }
+
+    .red {
+        display: none;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .equipe {
+        display: flex;
+        position: absolute;
+        flex-wrap: wrap;
+        justify-content: center;
+        top: 63%;
+        gap: 2.5rem;
+        padding: 5px;
+        z-index: 600;
+    }
+
+    .fondStaff {
+        background-image: url("../img/decor6.png");
+        height: 140vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
 }

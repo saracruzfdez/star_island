@@ -58,7 +58,7 @@ require_once 'inc/header.inc.php';
                 </div>
             </div>
 
-            <div id="titreEvent">
+            <div id="titreEvent2">
                 <h2>
                     Titre
                 </h2>

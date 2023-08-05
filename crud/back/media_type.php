@@ -1,18 +1,17 @@
 <?php require_once '../config/function.php';
-require_once '../inc/backheader.inc.php';
 
 
 if (!empty($_POST)) {
-
+    
     if (empty($_POST['title_media_type'])) {
-
+        
         $error = 'Ce champs est obligatoire';
     }
-
+    
     if (!isset($error)) {
 
         if (empty($_POST['id_media_type'])) {
-
+            
 
             execute("INSERT INTO media_type (title_media_type) VALUES (:title_media_type)", array(
                 ':title_media_type' => $_POST['title_media_type']
@@ -22,19 +21,19 @@ if (!empty($_POST)) {
             header('Location: media_type.php');
             exit();
         } // fin soumission en insert
-
+        
         else {
-
+            
             execute("UPDATE media_type SET title_media_type=:title WHERE id_media_type=:id", array(
                 ':id' => $_POST['id_media_type'],
                 ':title' => $_POST['title_media_type']
             ));
-
+            
 
             $_SESSION['messages']['success'][] = 'Média type modifié';
             header('Location: media_type.php');
             exit();
-
+            
         } // fin soumission modification
     } // fin si pas d'erreur
 
@@ -46,7 +45,7 @@ $medias_type = execute("SELECT * FROM media_type")->fetchAll(PDO::FETCH_ASSOC);
 
 
 if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'edit') {
-
+    
     $media_type = execute("SELECT * FROM media_type WHERE id_media_type=:id", array(
         ':id' => $_GET['id']
     ))->fetch(PDO::FETCH_ASSOC);
@@ -55,11 +54,11 @@ if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'e
 
 
 if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'del') {
-
+    
     $success = execute("DELETE FROM media_type WHERE id_media_type=:id", array(
         ':id' => $_GET['id']
     ));
-
+    
     if ($success) {
         $_SESSION['messages']['success'][] = 'Type supprimé';
         header('Location: media_type.php');
@@ -73,12 +72,12 @@ if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'd
 }
 
 
+require_once '../inc/backheader.inc.php';
 ?>
 
 
 <form action="" method="post" class="w-75 mx-auto mt-5 mb-5">
-
-
+    
     <div class="form-group">
         <small class="text-danger">*</small>
         <label for="media_type" class="form-label">Nom du type de média</label>
@@ -91,6 +90,7 @@ if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'd
 
 
     <button type="submit" class="btn btn-primary mt-2">Valider</button>
+
 </form>
 
 <table class="table table-dark table-striped w-75 mx-auto">

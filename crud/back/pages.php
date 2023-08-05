@@ -1,8 +1,5 @@
 <?php require_once '../config/function.php';
-require_once '../inc/backheader.inc.php'; ?>
 
-
-<?php
 // Traitement du formulaire, submit and send to bdd : 
 
 if (!empty($_POST)) {
@@ -22,36 +19,34 @@ if (!empty($_POST)) {
     }
 
     if (empty($pagesError)) {
-
         // Vérifie si je suis en update ou en insert avec get id rempli ou vide :
-
         if (empty($_GET['id_page'])) {
 
             $result = execute(
-                "INSERT INTO page (title_page, url)
-    VALUES (:title_page, :url)",
+                "INSERT INTO page (title_page, url) VALUES (:title_page, :url)",
                 array(
 
                     ':title_page' => $_POST['title_page'],
                     ':url' => $_POST['url']
-                )
-            );
+                ),);
+
+                $_SESSION['messages']['success'][] = 'Page ajoutée';
+                header('Location: pages.php');
+                exit();
         } else {
-//die("coucou");
-            execute("UPDATE page
-    SET title_page=:title_page, url=:url
-    WHERE id_page=:id_page",
+            //die("coucou");
+            execute(
+                "UPDATE page SET title_page=:title_page, url=:url WHERE id_page=:id_page",
                 array(
 
                     ':id_page' => $_POST['id_page'],
                     ':title_page' => $_POST['title_page'],
                     ':url' => $_POST['url']
+                ));
 
-                )
-            );
-
-            // header
-
+                $_SESSION['messages']['success'][] = 'Page modifié';
+                header('Location: pages.php');
+                exit();
         } // Fin vérification si je suis en update ou en insertion
 
     } // Fin verif $error pages
@@ -59,30 +54,16 @@ if (!empty($_POST)) {
 } // Fin vérification !empty $_POST
 
 // Vérifie si je recois les paramettres id et action en GET :
-// var_dump($_GET);
-
-
 // Verifie que je recois en get les parametres au click sur modifier et select cette entrée de la bdd (avec input id hidden) pour la modifier plus tard :
 
-if(!empty($_GET) && isset($_GET['id_page']) && isset($_GET['action']) && $_GET['action'] == "update") {
+if (!empty($_GET) && isset($_GET['id_page']) && isset($_GET['action']) && $_GET['action'] == "update") {
 
-$currentPage = execute(
-    
-    "SELECT * 
-FROM page 
-WHERE id_page=:id_page", array(
-
-':id_page' => $_GET['id_page']
-
-))->fetch(PDO::FETCH_ASSOC);
-
-// var_dump($currentPage);
+    $currentPage = execute("SELECT * FROM page WHERE id_page=:id_page", array(':id_page' => $_GET['id_page']))->fetch(PDO::FETCH_ASSOC);
+    // var_dump($currentPage);
 
 }
 
-?>
-
-
+require_once '../inc/backheader.inc.php'; ?>
 
 <!-- Ici le formulaire : -->
 <form action="" method="post" class="w-75 mx-auto mt-5 mb-5">
@@ -93,7 +74,7 @@ WHERE id_page=:id_page", array(
         <label for="title_page" class="form-label">Nom de la page</label>
         <input name="title_page" class="form-control" id="title_page" type="text" value="<?= $currentPage['title_page'] ?? '' ?>" placeholder="Nom de la page">
 
-        <small><?= $pagesError['title_page'] ?? ''?></small>
+        <small><?= $pagesError['title_page'] ?? '' ?></small>
     </div>
 
     <div class="form-group">
@@ -144,7 +125,7 @@ if ($pages) { ?>
                     <td><?= $page['url'] ?></td>
 
                     <td>
-                        <a class="btn btn-outline-info" href="<?= "?action=update&id_page=".$page['id_page']; ?>">Modifier</a>
+                        <a class="btn btn-outline-info" href="<?= "?action=update&id_page=" . $page['id_page']; ?>">Modifier</a>
                     </td>
                 </tr>
             <?php } ?>

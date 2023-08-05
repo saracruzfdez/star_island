@@ -74,7 +74,7 @@ require_once '../inc/backheader.inc.php'; ?>
         <label for="title_page" class="form-label">Nom de la page</label>
         <input name="title_page" class="form-control" id="title_page" type="text" value="<?= $currentPage['title_page'] ?? '' ?>" placeholder="Nom de la page">
 
-        <small><?= $pagesError['title_page'] ?? '' ?></small>
+        <small class="text-danger"><?= $pagesError['title_page'] ?? '' ?></small>
     </div>
 
     <div class="form-group">
@@ -83,7 +83,7 @@ require_once '../inc/backheader.inc.php'; ?>
         <label for="url" class="form-label">Adress URL</label>
         <input name="url" class="form-control" id="url" type="text" value="<?= $currentPage['url'] ?? '' ?>" placeholder="Adresse URL">
 
-        <small><?= $pagesError['url'] ?? '' ?></small>
+        <small class="text-danger"><?= $pagesError['url'] ?? '' ?></small>
     </div>
 
     <div class="form-group">

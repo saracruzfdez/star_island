@@ -9,7 +9,7 @@ function debug($data)
 }
 
 function execute(string $requete, array $data=[],$lastId=null)
-{
+{ 
     // boucle pour echapper les caractères speciaux (pour neutraliser les balise <style> ou <script>) en entité html et de même supprimer les espaces éventuels en début de fin de chaine de caractère
     foreach ($data as $marqueur => $valeur){
         // ici on réaffecte à notre tableau $data
@@ -19,6 +19,8 @@ function execute(string $requete, array $data=[],$lastId=null)
     }
     $pdo=Db::getDB(); // connexion à la BDD provenant de Db.php
     $resultat= $pdo->prepare($requete);// on prépare la requête envoyée avec marqueur (:marqueur)
+
+    // var_dump($data);
 
     $success=$resultat->execute($data);// on execute en passant notre tableau associatif de nos marqueurs avec leur valeurs
 

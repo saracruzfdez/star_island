@@ -71,9 +71,9 @@
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href="">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/content.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>??</span>
+                    <span>Gestion contenu</span>
                 </a>
             </li>
 

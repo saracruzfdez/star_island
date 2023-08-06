@@ -40,6 +40,8 @@ if (!empty($_POST)) {
 
 // read et affiche dans table html plus bas :
 $contents = execute("SELECT * FROM content")->fetchAll(PDO::FETCH_ASSOC);
+// read pages :
+$pages = execute("SELECT * FROM page")->fetchAll(PDO::FETCH_ASSOC);
 
 
 if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'edit') {
@@ -76,7 +78,7 @@ require_once '../inc/backheader.inc.php';
 
     <div class="form-group">
         <small class="text-danger">*</small>
-        
+
         <label for="title" class="form-label">Nom du contenu</label>
         <input name="title_content" id="title" placeholder="Nom du contenu" type="text" value="<?= $content['title_content'] ?? ''; ?>" class="form-control">
         <small class="text-danger"><?= $error ?? ''; ?></small>
@@ -87,6 +89,24 @@ require_once '../inc/backheader.inc.php';
         <label for="description" class="form-label">Description du contenu</label>
         <input name="description_content" id="description" placeholder="Description du contenu" type="text" value="<?= $content['description_content'] ?? ''; ?>" class="form-control">
         <small class="text-danger"><?= $error ?? ''; ?></small>
+    </div>
+
+    <div class="form-group">
+        <small class="text-danger">*</small>
+
+        <label for="opcion">Page :</label>
+        <select name="id_page" id="opcion">
+            <?php
+            // Recorremos las opciones y las mostramos en el select
+            foreach ($pages as $page) {
+
+                $valor = $page['title_page'];
+                echo "<option>$valor</option>";
+
+            }
+                ?>
+        </select>
+
     </div>
 
     <input type="hidden" name="id_content" value="<?= $content['id_content'] ?? ''; ?>">
@@ -109,6 +129,7 @@ require_once '../inc/backheader.inc.php';
 
                 <td><?= $content['title_content']; ?></td>
                 <td><?= $content['description_content']; ?></td>
+                <td><?= $page['title_page']; ?></td>
 
                 <td class="text-center">
 

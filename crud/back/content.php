@@ -124,7 +124,7 @@ require_once '../inc/backheader.inc.php';
 <table class="table table-dark table-striped w-75 mx-auto">
     <thead>
         <tr>
-            <th>Titre</th>
+            <th>Nom du contenu</th>
             <th>Description</th>
             <th>Page</th>
             <th class="text-center">Actions</th>

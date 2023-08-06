@@ -109,9 +109,8 @@ if ($pages) { ?>
 
         <thead>
             <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Titre</th>
-                <th scope="col">URL</th>
+                <th scope="col">Nom de la page</th>
+                <th scope="col">Adresse URL</th>
                 <th scope="col">Actions</th>
             </tr>
         </thead>
@@ -120,7 +119,6 @@ if ($pages) { ?>
 
             <?php foreach ($pages as $page) { ?>
                 <tr>
-                    <td><?= $page['id_page'] ?></td>
                     <td><?= $page['title_page'] ?></td>
                     <td><?= $page['url'] ?></td>
 

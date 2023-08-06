@@ -82,18 +82,18 @@ require_once '../inc/backheader.inc.php';
 ?>
 
 <form action="" method="post" class="w-75 mx-auto mt-5 mb-5">
-    <div class="form-group">
-        <small class="text-danger">*</small>
-
-        <label for="title" class="form-label">Titre du media</label>
-        <input name="title_media" id="title" placeholder="Titre du media" type="text" value="<?= $media['title_media'] ?? ''; ?>" class="form-control">
-        <small class="text-danger"><?= $error ?? ''; ?></small>
-    </div>
 
     <div class="form-group">
         <small class="text-danger">*</small>
         <label for="name" class="form-label">Nom du media</label>
         <input name="name_media" id="name" placeholder="Nom du media" type="text" value="<?= $media['name_media'] ?? ''; ?>" class="form-control">
+        <small class="text-danger"><?= $error ?? ''; ?></small>
+    </div>
+    <div class="form-group">
+        <small class="text-danger">*</small>
+
+        <label for="title" class="form-label">Titre du media</label>
+        <input name="title_media" id="title" placeholder="Titre du media" type="text" value="<?= $media['title_media'] ?? ''; ?>" class="form-control">
         <small class="text-danger"><?= $error ?? ''; ?></small>
     </div>
 
@@ -116,7 +116,7 @@ require_once '../inc/backheader.inc.php';
             ?>
         </select>
         <div>
-        <small class="text-danger"><?= $error ?? ''; ?></small>
+            <small class="text-danger"><?= $error ?? ''; ?></small>
 
         </div>
     </div>
@@ -140,7 +140,7 @@ require_once '../inc/backheader.inc.php';
             ?>
         </select>
         <div>
-        <small class="text-danger"><?= $error ?? ''; ?></small>
+            <small class="text-danger"><?= $error ?? ''; ?></small>
 
         </div>
     </div>
@@ -153,8 +153,8 @@ require_once '../inc/backheader.inc.php';
 <table class="table table-dark table-striped w-75 mx-auto">
     <thead>
         <tr>
-            <th>Titre</th>
-            <th>Nom</th>
+            <th>Nom du media</th>
+            <th>Titre du media</th>
             <th>Page</th>
             <th>Type de média</th>
             <th class="text-center">Actions</th>

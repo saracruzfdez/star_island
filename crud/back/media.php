@@ -3,7 +3,7 @@
 
 if (!empty($_POST)) {
 
-    if (empty($_POST['title_media']) | empty($_POST['name_media'])) {
+    if (empty($_POST['title_media']) | empty($_POST['name_media']) | empty($_POST['id_page']) | empty($_POST['id_media_type'])) {
         $error = 'Ce champs est obligatoire';
     }
 
@@ -11,9 +11,11 @@ if (!empty($_POST)) {
 
         if (empty($_POST['id_media'])) {
 
-            execute("INSERT INTO media (title_media, name_media) VALUES (:title_media, :name_media)", array(
+            execute("INSERT INTO media (title_media, name_media, id_page, id_media_type) VALUES (:title_media, :name_media, :id_page, :id_media_type)", array(
                 ':title_media' => $_POST['title_media'],
-                ':name_media' => $_POST['name_media']
+                ':name_media' => $_POST['name_media'],
+                ':id_page' => $_POST['id_page'],
+                ':id_media_type' => $_POST['id_media_type'],
             ),);
 
             $_SESSION['messages']['success'][] = 'Media ajouté';
@@ -23,13 +25,13 @@ if (!empty($_POST)) {
 
         else {
 
-            execute("UPDATE media SET title_media=:title, name_media=:name, id_page=:option WHERE id_media=:id", array(
+            execute("UPDATE media SET title_media=:title, name_media=:name, id_page=:option, id_media_type=:opcionMediaType WHERE id_media=:id", array(
 
                 ':id' => $_POST['id_media'],
                 ':title' => $_POST['title_media'],
                 ':name' => $_POST['name_media'],
                 ':option' => $_POST['id_page'],
-
+                ':opcionMediaType' => $_POST['id_media_type']
             ));
 
             $_SESSION['messages']['success'][] = 'Media modifié';
@@ -44,6 +46,9 @@ if (!empty($_POST)) {
 $medias = execute("SELECT * FROM media")->fetchAll(PDO::FETCH_ASSOC);
 // read pages :
 $pages = execute("SELECT * FROM page")->fetchAll(PDO::FETCH_ASSOC);
+// read type de media :
+$mediaTypes = execute("SELECT * FROM media_type")->fetchAll(PDO::FETCH_ASSOC);
+// debug($mediaTypes);
 
 
 if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'edit') {
@@ -51,7 +56,7 @@ if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'e
     $media = execute("SELECT * FROM media WHERE id_media=:id", array(
         ':id' => $_GET['id']
     ))->fetch(PDO::FETCH_ASSOC);
-    //debug($media);
+    // debug($media);
 }
 
 
@@ -110,6 +115,34 @@ require_once '../inc/backheader.inc.php';
             }
             ?>
         </select>
+        <div>
+        <small class="text-danger"><?= $error ?? ''; ?></small>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <small class="text-danger">*</small>
+        <label for="opcionMediaType">Type de média :</label>
+        <select name="id_media_type" id="opcionMediaType">
+            <?php
+            // Recorremos las opciones y las mostramos en el select
+            foreach ($mediaTypes as $mediaTypeOption) {
+                $valorOption = $mediaTypeOption['title_media_type'];
+
+                $selected = '';
+                if (isset($media['id_media_type']) && $media['id_media_type'] == $mediaTypeOption['id_media_type']) {
+                    $selected = 'selected';
+                }
+
+                echo "<option value='{$mediaTypeOption['id_media_type']}' $selected>$valorOption</option>";
+            }
+            ?>
+        </select>
+        <div>
+        <small class="text-danger"><?= $error ?? ''; ?></small>
+
+        </div>
     </div>
 
     <input type="hidden" name="id_media" value="<?= $media['id_media'] ?? ''; ?>">
@@ -122,6 +155,8 @@ require_once '../inc/backheader.inc.php';
         <tr>
             <th>Titre</th>
             <th>Nom</th>
+            <th>Page</th>
+            <th>Type de média</th>
             <th class="text-center">Actions</th>
         </tr>
     </thead>
@@ -142,7 +177,19 @@ require_once '../inc/backheader.inc.php';
                     }
                     ?>
                 </td>
-                
+
+                <td>
+                    <?php
+                    // Recorremos las opciones y buscamos la página asociada al contenido actual
+                    foreach ($mediaTypes as $mediaTypeOption) {
+                        if ($media['id_media_type'] == $mediaTypeOption['id_media_type']) {
+                            echo $mediaTypeOption['title_media_type'];
+                            break; // Salimos del bucle interno una vez encontrada la página asociada
+                        }
+                    }
+                    ?>
+                </td>
+
                 <td class="text-center">
 
                     <a href="?id=<?= $media['id_media']; ?>&a=edit" class="btn btn-outline-info">Modifier</a>

@@ -3,7 +3,7 @@
 
 if (!empty($_POST)) {
 
-    if (empty($_POST['title_content']) | empty($_POST['description_content'])) {
+    if (empty($_POST['title_content']) | empty($_POST['description_content']) | empty($_POST['id_page'])) {
         $error = 'Ce champs est obligatoire';
     }
 
@@ -11,9 +11,10 @@ if (!empty($_POST)) {
 
         if (empty($_POST['id_content'])) {
 
-            execute("INSERT INTO content (title_content, description_content) VALUES (:title_content, :description_content)", array(
+            execute("INSERT INTO content (title_content, description_content, id_page) VALUES (:title_content, :description_content, :id_page)", array(
                 ':title_content' => $_POST['title_content'],
-                ':description_content' => $_POST['description_content']
+                ':description_content' => $_POST['description_content'],
+                ':id_page' => $_POST['id_page']
             ),);
 
             $_SESSION['messages']['success'][] = 'Contenu ajouté';
@@ -110,6 +111,9 @@ require_once '../inc/backheader.inc.php';
             }
             ?>
         </select>
+        <div>
+            <small class="text-danger"><?= $error ?? ''; ?></small>
+        </div>
     </div>
 
     <input type="hidden" name="id_content" value="<?= $content['id_content'] ?? ''; ?>">
@@ -122,6 +126,7 @@ require_once '../inc/backheader.inc.php';
         <tr>
             <th>Titre</th>
             <th>Description</th>
+            <th>Page</th>
             <th class="text-center">Actions</th>
         </tr>
     </thead>

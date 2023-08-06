@@ -3,37 +3,37 @@
 
 if (!empty($_POST)) {
 
-    if (empty($_POST['title_content']) | empty($_POST['description_content'])) {
+    if (empty($_POST['title_media']) | empty($_POST['name_media'])) {
         $error = 'Ce champs est obligatoire';
     }
 
     if (!isset($error)) {
 
-        if (empty($_POST['id_content'])) {
+        if (empty($_POST['id_media'])) {
 
-            execute("INSERT INTO content (title_content, description_content) VALUES (:title_content, :description_content)", array(
-                ':title_content' => $_POST['title_content'],
-                ':description_content' => $_POST['description_content']
+            execute("INSERT INTO media (title_media, name_media) VALUES (:title_media, :name_media)", array(
+                ':title_media' => $_POST['title_media'],
+                ':name_media' => $_POST['name_media']
             ),);
 
-            $_SESSION['messages']['success'][] = 'Contenu ajouté';
-            header('Location: content.php');
+            $_SESSION['messages']['success'][] = 'Media ajouté';
+            header('Location: media.php');
             exit();
         } // fin soumission en insert
 
         else {
 
-            execute("UPDATE content SET title_content=:title, description_content=:description, id_page=:option WHERE id_content=:id", array(
+            execute("UPDATE media SET title_media=:title, name_media=:name, id_page=:option WHERE id_media=:id", array(
 
-                ':id' => $_POST['id_content'],
-                ':title' => $_POST['title_content'],
-                ':description' => $_POST['description_content'],
+                ':id' => $_POST['id_media'],
+                ':title' => $_POST['title_media'],
+                ':name' => $_POST['name_media'],
                 ':option' => $_POST['id_page'],
 
             ));
 
-            $_SESSION['messages']['success'][] = 'Contenu modifié';
-            header('Location: content.php');
+            $_SESSION['messages']['success'][] = 'Media modifié';
+            header('Location: media.php');
             exit();
         } // fin soumission modification
     } // fin si pas d'erreur
@@ -41,33 +41,33 @@ if (!empty($_POST)) {
 } // fin !empty $_POST
 
 // read et affiche dans table html plus bas :
-$contents = execute("SELECT * FROM content")->fetchAll(PDO::FETCH_ASSOC);
+$medias = execute("SELECT * FROM media")->fetchAll(PDO::FETCH_ASSOC);
 // read pages :
 $pages = execute("SELECT * FROM page")->fetchAll(PDO::FETCH_ASSOC);
 
 
 if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'edit') {
 
-    $content = execute("SELECT * FROM content WHERE id_content=:id", array(
+    $media = execute("SELECT * FROM media WHERE id_media=:id", array(
         ':id' => $_GET['id']
     ))->fetch(PDO::FETCH_ASSOC);
-    //debug($content);
+    //debug($media);
 }
 
 
 if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'del') {
 
-    $success = execute("DELETE FROM content WHERE id_content=:id", array(
+    $success = execute("DELETE FROM media WHERE id_media=:id", array(
         ':id' => $_GET['id']
     ));
 
     if ($success) {
-        $_SESSION['messages']['success'][] = 'Type supprimé';
-        header('Location: content.php');
+        $_SESSION['messages']['success'][] = 'Media supprimé';
+        header('Location: media.php');
         exit;
     } else {
         $_SESSION['messages']['danger'][] = 'Problème de traitement, veuillez réitérer';
-        header('Location: content.php');
+        header('Location: media.php');
         exit;
     }
 }
@@ -80,15 +80,15 @@ require_once '../inc/backheader.inc.php';
     <div class="form-group">
         <small class="text-danger">*</small>
 
-        <label for="title" class="form-label">Nom du contenu</label>
-        <input name="title_content" id="title" placeholder="Nom du contenu" type="text" value="<?= $content['title_content'] ?? ''; ?>" class="form-control">
+        <label for="title" class="form-label">Titre du media</label>
+        <input name="title_media" id="title" placeholder="Titre du media" type="text" value="<?= $media['title_media'] ?? ''; ?>" class="form-control">
         <small class="text-danger"><?= $error ?? ''; ?></small>
     </div>
 
     <div class="form-group">
         <small class="text-danger">*</small>
-        <label for="description" class="form-label">Description du contenu</label>
-        <input name="description_content" id="description" placeholder="Description du contenu" type="text" value="<?= $content['description_content'] ?? ''; ?>" class="form-control">
+        <label for="name" class="form-label">Nom du media</label>
+        <input name="name_media" id="name" placeholder="Nom du media" type="text" value="<?= $media['name_media'] ?? ''; ?>" class="form-control">
         <small class="text-danger"><?= $error ?? ''; ?></small>
     </div>
 
@@ -102,7 +102,7 @@ require_once '../inc/backheader.inc.php';
                 $valor = $pageOption['title_page'];
 
                 $selected = '';
-                if (isset($content['id_page']) && $content['id_page'] == $pageOption['id_page']) {
+                if (isset($media['id_page']) && $media['id_page'] == $pageOption['id_page']) {
                     $selected = 'selected';
                 }
 
@@ -112,7 +112,7 @@ require_once '../inc/backheader.inc.php';
         </select>
     </div>
 
-    <input type="hidden" name="id_content" value="<?= $content['id_content'] ?? ''; ?>">
+    <input type="hidden" name="id_media" value="<?= $media['id_media'] ?? ''; ?>">
 
     <button type="submit" class="btn btn-primary mt-2">Valider</button>
 </form>
@@ -121,21 +121,21 @@ require_once '../inc/backheader.inc.php';
     <thead>
         <tr>
             <th>Titre</th>
-            <th>Description</th>
+            <th>Nom</th>
             <th class="text-center">Actions</th>
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($contents as $content) : ?>
+        <?php foreach ($medias as $media) : ?>
             <tr>
 
-                <td><?= $content['title_content']; ?></td>
-                <td><?= $content['description_content']; ?></td>
+                <td><?= $media['title_media']; ?></td>
+                <td><?= $media['name_media']; ?></td>
                 <td>
                     <?php
                     // Recorremos las opciones y buscamos la página asociada al contenido actual
                     foreach ($pages as $pageOption) {
-                        if ($content['id_page'] == $pageOption['id_page']) {
+                        if ($media['id_page'] == $pageOption['id_page']) {
                             echo $pageOption['title_page'];
                             break; // Salimos del bucle interno una vez encontrada la página asociada
                         }
@@ -145,9 +145,9 @@ require_once '../inc/backheader.inc.php';
                 
                 <td class="text-center">
 
-                    <a href="?id=<?= $content['id_content']; ?>&a=edit" class="btn btn-outline-info">Modifier</a>
+                    <a href="?id=<?= $media['id_media']; ?>&a=edit" class="btn btn-outline-info">Modifier</a>
 
-                    <a href="?id=<?= $content['id_content']; ?>&a=del" onclick="return confirm('Etes-vous sûr?')" class="btn btn-outline-danger">Supprimer</a>
+                    <a href="?id=<?= $media['id_media']; ?>&a=del" onclick="return confirm('Etes-vous sûr?')" class="btn btn-outline-danger">Supprimer</a>
 
                 </td>
             </tr>

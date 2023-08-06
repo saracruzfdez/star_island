@@ -80,27 +80,9 @@
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href="">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/media.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>??</span>
-                </a>
-            </li>
-
-
-            <hr class="sidebar-divider">
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>??</span>
-                </a>
-            </li>
-
-
-            <hr class="sidebar-divider">
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>??</span>
+                    <span>Gestion media</span>
                 </a>
             </li>
 

@@ -23,12 +23,14 @@ if (!empty($_POST)) {
 
         else {
 
-            execute("UPDATE content SET title_content=:title, description_content=:description WHERE id_content=:id", array(
+            execute("UPDATE content SET title_content=:title, description_content=:description, id_page=:option WHERE id_content=:id", array(
+
                 ':id' => $_POST['id_content'],
                 ':title' => $_POST['title_content'],
-                ':description' => $_POST['description_content']
-            ));
+                ':description' => $_POST['description_content'],
+                ':option' => $_POST['id_page'],
 
+            ));
 
             $_SESSION['messages']['success'][] = 'Contenu modifié';
             header('Location: content.php');
@@ -75,7 +77,6 @@ require_once '../inc/backheader.inc.php';
 ?>
 
 <form action="" method="post" class="w-75 mx-auto mt-5 mb-5">
-
     <div class="form-group">
         <small class="text-danger">*</small>
 
@@ -93,26 +94,27 @@ require_once '../inc/backheader.inc.php';
 
     <div class="form-group">
         <small class="text-danger">*</small>
-
         <label for="opcion">Page :</label>
         <select name="id_page" id="opcion">
             <?php
             // Recorremos las opciones y las mostramos en el select
-            foreach ($pages as $page) {
+            foreach ($pages as $pageOption) {
+                $valor = $pageOption['title_page'];
 
-                $valor = $page['title_page'];
-                echo "<option>$valor</option>";
+                $selected = '';
+                if (isset($content['id_page']) && $content['id_page'] == $pageOption['id_page']) {
+                    $selected = 'selected';
+                }
 
+                echo "<option value='{$pageOption['id_page']}' $selected>$valor</option>";
             }
-                ?>
+            ?>
         </select>
-
     </div>
 
     <input type="hidden" name="id_content" value="<?= $content['id_content'] ?? ''; ?>">
 
     <button type="submit" class="btn btn-primary mt-2">Valider</button>
-
 </form>
 
 <table class="table table-dark table-striped w-75 mx-auto">
@@ -129,8 +131,17 @@ require_once '../inc/backheader.inc.php';
 
                 <td><?= $content['title_content']; ?></td>
                 <td><?= $content['description_content']; ?></td>
-                <td><?= $page['title_page']; ?></td>
-
+                <td>
+                    <?php
+                    // Recorremos las opciones y buscamos la página asociada al contenido actual
+                    foreach ($pages as $pageOption) {
+                        if ($content['id_page'] == $pageOption['id_page']) {
+                            echo $pageOption['title_page'];
+                            break; // Salimos del bucle interno una vez encontrada la página asociada
+                        }
+                    }
+                    ?>
+                </td>
                 <td class="text-center">
 
                     <a href="?id=<?= $content['id_content']; ?>&a=edit" class="btn btn-outline-info">Modifier</a>

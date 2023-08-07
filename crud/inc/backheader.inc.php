@@ -97,33 +97,18 @@
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href="">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/comment.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>??</span>
+                    <span>Gestion d'events</span>
                 </a>
             </li>
 
-
             <hr class="sidebar-divider">
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item ">
-                <a class="nav-link collapsed" href="">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>??</span>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/comment.php' ?>">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Gestion de la team</span>
                 </a>
-                <!--            <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"-->
-                <!--                 data-parent="#accordionSidebar">-->
-                <!--                <div class="bg-white py-2 collapse-inner rounded">-->
-                <!--                    <h6 class="collapse-header">Login Screens:</h6>-->
-                <!--                    <a class="collapse-item" href="{{path('app_admin_crud_newsletter_new')}}">Gestion Newsletter</a>-->
-                <!--                    <a class="collapse-item" href="{{path('app_admin_crud_membre')}}">Gestion Membre</a>-->
-                <!--                    <a class="collapse-item" href="{{path('app_admin_crud_avis')}}">Gestion Avis</a>-->
-                <!--                    <a class="collapse-item" href="{{path('app_admin_crud_contact')}}">Gestion Contact</a>-->
-                <!--                    <div class="collapse-divider"></div>-->
-                <!--                    <h6 class="collapse-header">autres:</h6>-->
-                <!--                    <a class="collapse-item active" href="{{path('admin_crud_slider_new')}}">Gestion slider</a>-->
-                <!--                </div>-->
-                <!--            </div>-->
             </li>
 
 
@@ -152,18 +137,14 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                    <!-- Topbar Search -->
-
-
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link " href="<?= BASE_PATH; ?>" role="button">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Voir le site</span>
-                                <img class="img-profile rounded-circle" src="">
+                                <img class="img-profile rounded-circle" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60">
                             </a>
-
                         </li>
                     </ul>
                 </nav>

@@ -164,8 +164,8 @@ require_once '../inc/backheader.inc.php';
         <?php foreach ($medias as $media) : ?>
             <tr>
 
-                <td><?= $media['title_media']; ?></td>
                 <td><?= $media['name_media']; ?></td>
+                <td><?= $media['title_media']; ?></td>
                 <td>
                     <?php
                     // Recorremos las opciones y buscamos la página asociada al contenido actual

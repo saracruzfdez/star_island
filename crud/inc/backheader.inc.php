@@ -89,12 +89,11 @@
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href="">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/comment.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>??</span>
+                    <span>Gestion commentaires</span>
                 </a>
             </li>
-
 
             <hr class="sidebar-divider">
             <li class="nav-item">

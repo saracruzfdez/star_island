@@ -31,7 +31,7 @@ require_once 'inc/header.inc.php';
         <div class="carousel-inner">
             <div class="scf-carousel carousel-item active">
                 <p class="press">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoris enim ad minim veniam, quis nostrud exercitation u exeris nisi ut aliquip ex ea com dolor sit amet, consectetur adipiscing elit, sed do eiusmoris enim ad minim veniam, quis minim veniam, quis  consectetur adipiscingexercitation u exeris nisi ut aliquip exea commodo onsequscing consectetur adipiscingexercitation u exeris nisi ut aliquip exea commodo onsequscing exercitation u exeri consectetur adipiscingexercitation u exeris nisi ut aliquip ex ea commodo onsequscing exercitation u exeris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoris enim ad minim veniam, quis nostrud exercitation u exeris nisi ut aliquip ex ea com dolor sit amet, consectetur adipiscing elit, sed do eiusmoris enim ad minim veniam, quis minim veniam, quis consectetur adipiscingexercitation u exeris nisi ut aliquip exea commodo onsequscing consectetur adipiscingexercitation u exeris nisi ut aliquip exea commodo onsequscing exercitation u exeri consectetur adipiscingexercitation u exeris nisi ut aliquip ex ea commodo onsequscing exercitation u exeris nisi ut aliquip ex ea commodo consequat.
                 </p>
             </div>
 
@@ -64,8 +64,8 @@ require_once 'inc/header.inc.php';
         </div>
     </div>
 
-    
-    
+
+
     <div class="scf-carousel carousel-item">
         <form class="scf-form">
             <div class="form-group">
@@ -151,16 +151,18 @@ require_once 'inc/header.inc.php';
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </div>
-       
-        
+
+
     </section>
     <!-- Avatars END -->
 
     <!-- Form -->
     <section class="form">
-        <form class="scf-form">
+        <form action="<?=  BASE_PATH.'back/comment.php'; ?>" method="post" class="scf-form">
+
             <div class="form-group">
-                <label for="exampleFormControlTextarea1">VOTRE AVIS NOUS INTERESSE !</label>
+                <label for="text">VOTRE AVIS NOUS INTERESSE !</label>
+                
                 <div>
                     <img class="etoile" src="assets\img\blackStar.png" alt="">
                     <img class="etoile" src="assets\img\blackStar.png" alt="">
@@ -168,8 +170,12 @@ require_once 'inc/header.inc.php';
                     <img class="etoile" src="assets\img\blackStar.png" alt="">
                     <img class="etoile" src="assets\img\blackStar.png" alt="">
                 </div>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ecrivez votre commentaire"></textarea>
+
+                <input name="nickname_comment" id="nickname" placeholder="Ecrivez votre nickname" type="text" class="form-control">
+
+                <input name="comment_text" id="text" placeholder="Ecrivez votre commentaire" type="text" class="form-control">
             </div>
+
             <div>
                 <button type="submit" class="btn btn-warning">Publier</button>
             </div>

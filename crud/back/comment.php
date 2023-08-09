@@ -16,8 +16,7 @@ if (!empty($_POST)) {
 
         execute("INSERT INTO comment (rating_comment, comment_text, publish_date_comment, nickname_comment, activated, id_media) VALUES (:rating_comment, :comment_text, :publish_date_comment, :nickname_comment, :activated, :id_media)", array(
 
-            ':rating_comment' => 1,
-            // ':rating_comment' => $_POST['rating_comment'],
+            ':rating_comment' => $_POST['rating_comment'],
             ':comment_text' => $_POST['comment_text'],
             ':publish_date_comment' => date("Y-m-d H:i:s"),
             ':nickname_comment' => $_POST['nickname_comment'],
@@ -27,7 +26,7 @@ if (!empty($_POST)) {
         ),);
 
         $_SESSION['messages']['success'][] = 'Comment ajouté';
-        header('Location: comment.php');
+        header('Location: '.BASE_PATH);
         exit();
     } // fin soumission en insert
 

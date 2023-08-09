@@ -17,6 +17,7 @@
 <script src="assets\slick-1.8.1\slick\slick.js"></script>
 <script src="assets\slick-1.8.1\slick\slick.min.js"></script>
 <script src="assets\slick-1.8.1\slick\slick.min.js"></script>
+<script src="assets\js\rating-component.js"></script>
 
 </script>
 <script type="text/javascript">

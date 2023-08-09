@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="assets\css\commun.css">
+
+    <link rel="stylesheet" href="assets\css\rating-component.css">
     <link rel="stylesheet" href="assets\css\header.css">
     <link rel="stylesheet" href="assets\css\footer.css">
     <link rel="stylesheet" href="assets\css\reseaux.css">

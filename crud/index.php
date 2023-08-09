@@ -163,12 +163,13 @@ require_once 'inc/header.inc.php';
             <div class="form-group">
                 <label for="text">VOTRE AVIS NOUS INTERESSE !</label>
                 
-                <div>
-                    <img class="etoile" src="assets\img\blackStar.png" alt="">
-                    <img class="etoile" src="assets\img\blackStar.png" alt="">
-                    <img class="etoile" src="assets\img\blackStar.png" alt="">
-                    <img class="etoile" src="assets\img\blackStar.png" alt="">
-                    <img class="etoile" src="assets\img\blackStar.png" alt="">
+                <div class="rating">
+                    <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>
+                    <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>
+                    <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>
+                    <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>
+                    <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>
+                    <input name="rating_comment" type="hidden" class="rating__input" value=0>
                 </div>
 
                 <input name="nickname_comment" id="nickname" placeholder="Ecrivez votre nickname" type="text" class="form-control">

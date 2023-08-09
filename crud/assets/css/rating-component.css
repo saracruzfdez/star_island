@@ -1,0 +1,22 @@
+.rating {
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
+}
+
+.rating .rating__star {
+    cursor: pointer;
+}
+
+.rating .rating__starOn {
+    display: none;
+}
+
+.rating .rating__starOff {
+    color: black;
+}
+
+.rating .rating__starOff:hover {
+    color: yellow;
+}

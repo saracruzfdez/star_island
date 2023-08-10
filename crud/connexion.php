@@ -4,90 +4,33 @@ require_once 'inc/header.inc.php';
 
 if (!empty($_POST)) {
 
-    if ((isset($_GET['action']) && $_GET['action']) == "register") { // Condition de traitement de la connexion grace à $_GET['register'] :
+    $error = array();
 
-        //var_dump($_FILES);
-        //die();
-        $error = array();
+    if (empty($_POST['nickname'])) {
 
-        if (empty($_POST['pseudo'])) {
+        $error['nickname'] = 'Pseudo obligatoire';
+    }
 
-            $error['pseudo'] = 'Pseudo obligatoire';
-        }
+    if (empty($_POST['password_user'])) {
 
-        if (empty($_POST['password'])) {
+        $error['password_user'] = 'Password obligatoire';
+    }
 
-            $error['password'] = 'Password obligatoire';
-        }
+    if (empty($error)) {
 
-        if (empty($_FILES['picture_profil']['name'])) {
+        $result = execute("SELECT * FROM user");
 
-            $error['picture_profil'] = 'Photo de profil obligatoire';
-        }
-
-        if (empty($error)) {
-
-            $mdp = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-            $result = execute("SELECT * FROM user WHERE pseudo=:pseudo", array(':pseudo' => $_POST['pseudo']));
-
-            // var_dump($result->fetch(PDO::FETCH_ASSOC));
-            // die();
-
-            if ($result->rowCount() == 0) {
-
-                $picture = date_format(new DateTime(), 'Y_m_d_i_s') . $_FILES['picture_profil']['name'];
-                // var_dump($picture);die();
-
-                if (!file_exists('upload/')) {
-
-                    mkdir('upload', 777);
-                }
-
-                copy($_FILES['picture_profil']['tmp_name'], 'upload/' . $picture);
-                //unlink('upload/nomimage.png');
-
-                $result = execute("INSERT INTO user (pseudo, picture_profil, password) VALUES (:pseudo, :picture_profil, :password)", array(
-
-                    ':pseudo' => $_POST['pseudo'],
-                    ':picture_profil' => 'upload/' . $picture,
-                    ':password' => $mdp
-
-                ));
-
-                //Une fois l'inscription faite, on redirige vers la page de login :
-                header('location:./authentication.php?action=login');
-                exit();
-            } else {
-
-                $error['pseudo_existant'] = "Votre pseudo est déjà utilisé";
-            }
-        } // Fin empty $error
-    } // Fin condition de traitement de la connexion grace à $_GET['register']
-
-    // condition de traitement de la connexion grace à $_GET['action'] :
-    if ((isset($_GET['action']) && $_GET['action']) == "login") {
-        $result = execute("SELECT * FROM user WHERE pseudo=:pseudo", array(':pseudo' => $_POST['pseudo']));
-
-        if ($result->rowCount() == 1) {
             $user = $result->fetch(PDO::FETCH_ASSOC);
-            // var_dump($user);
-            // die();
 
-            if (password_verify($_POST['password'], $user['password'])) {
+            var_dump($user);
+            die();
 
-                $_SESSION['user'] = $user;
-                header('location:./');
-                exit();
-            } else {
-
-                $error['password'] = 'erreur sur le mot de passe';
-            }
-        } else {
-            $error['pseudo_pas_existant'] = "Aucun compte existe à ce nom";
+            $_SESSION['user'] = $user;
+            header('location:./');
+            exit();
         }
     }
-} // Fin !empty $_POST
+
 
 ?>
 
@@ -103,16 +46,18 @@ if (!empty($_POST)) {
         <form class="w-50 mx-auto scf-connexion" ; method="post" action="">
             <div class="form-group">
                 <label for="pseudo" class="form-label"></label>
-                <input name="pseudo" class="form-control" id="pseudo" type="text" placeholder="Ecrivez votre pseudo">
+                <input name="nickname" class="form-control" id="nickname" type="text" placeholder="Ecrivez votre nickname">
+                <small class="text-danger"><?= $error['nickname'] ?? ''; ?></small>
+
             </div>
             <div class="form-group">
                 <label for="password" class="form-label"></label>
-                <input name="password" class="form-control" id="password" type="password" placeholder="Ecrivez votre mot de passe">
+                <input name="password_user" class="form-control" id="password_user" type="password_user" placeholder="Ecrivez votre mot de passe">
+                <small class="text-danger"><?= $error['password_user'] ?? ''; ?></small>
             </div>
             <button type="submit" class="btn btn-warning mt-3 justify-content-center">Envoyer</button>
         </form>
     </div>
 </div>
-
 
 <!-- <?php require_once 'inc/footer.inc.php';          ?> -->

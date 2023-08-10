@@ -47,39 +47,27 @@
                         <a class="nav-link text-white" href="crud\galerie.php">GALLERIE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">DEVENIR VIP</a>
+                        <a class="nav-link text-white" href="#">VIP</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="<?= BASE_PATH . 'equipe.php'; ?>">SERVEUR</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="<?= BASE_PATH . 'connexion.php'; ?>"><img style="height : 20px" ; src="assets\img\images.svg"></a>
-                    </li>
 
-                    <!--
-                        <?php if (admin()) :           ?>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ADMIN</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="<?= BASE_PATH . 'back/userList.php'; ?>">Gestion utilisateur</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="<?= BASE_PATH . 'back/'; ?>">Accès Back-office</a>
-                                </div>
-                            </li>
-                        <?php endif;
-                        ?>
-                                  -->
-
+                    
+                    <?php if (empty($_SESSION)) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="<?php BASE_PATH . 'connexion.php'; ?>"><img style="height : 20px" ; src="assets\img\images.svg"></a>
+                        </li>
+                    <?php } ?>
+                    <?php if (isset($_SESSION) && (!empty($_SESSION))) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link text-red" href="<?= BASE_PATH . 'back/media_type.php'; ?>">GESTION</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-red" href="<?= BASE_PATH . 'deconnexion.php'; ?>">DECONNEXION</a>
+                        </li>
+                    <?php } ?>
                 </ul>
-
-                <!-- <?php if (connect()) :           ?>
-                        <a href="<?= BASE_PATH . '?a=dis'; ?>" class="btn btn-primary">Déconnexion</a>
-                    <?php else :           ?>
-                        <a href="<?= BASE_PATH . 'security/login.php'; ?>" class="btn btn-primary">Connexion</a>
-                        <a href="<?= BASE_PATH . 'security/register.php'; ?>" class="btn btn-success">Inscription</a>
-                    <?php endif;        ?> -->
 
                 <div id="tutoEvent">
                     <a class="nav-link text-white tutoEvent align-items-center" id="nav-link" href="#">
@@ -92,9 +80,10 @@
                     </a>
                 </div>
             </div>
-
         </nav>
     </header>
+
+
 
     <main>
         <!-- <?php if (isset($_SESSION['messages']) && !empty($_SESSION['messages'])) :           ?>

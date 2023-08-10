@@ -1,5 +1,4 @@
 <?php require_once 'config/function.php';
-require_once 'inc/header.inc.php';
 
 
 if (!empty($_POST)) {
@@ -22,15 +21,13 @@ if (!empty($_POST)) {
 
             $user = $result->fetch(PDO::FETCH_ASSOC);
 
-            var_dump($user);
-            die();
-
             $_SESSION['user'] = $user;
-            header('location:./');
+            header('Location: index.php');
             exit();
         }
     }
 
+    require_once 'inc/header.inc.php';
 
 ?>
 

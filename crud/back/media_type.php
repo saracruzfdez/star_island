@@ -61,7 +61,7 @@ if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'd
     
     
     if ($success) {
-        $_SESSION['messages']['success'][] = 'Type supprimé';
+        $_SESSION['messages']['success'][] = 'Média type supprimé';
         header('Location: media_type.php');
         exit;
         

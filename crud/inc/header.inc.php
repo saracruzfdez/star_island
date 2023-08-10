@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="assets/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="assets\css\commun.css">
 
+    <link rel="stylesheet" href="assets\css\connexion.css">
     <link rel="stylesheet" href="assets\css\rating-component.css">
     <link rel="stylesheet" href="assets\css\header.css">
     <link rel="stylesheet" href="assets\css\footer.css">
@@ -29,30 +30,33 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-         
-                <a class="navbar-brand p-0" href=""><img id="logo" src="assets\img\starisland.png"></a>
-                <button class="navbar-toggler test" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse " id="navbarColor01">
-                    <ul id="ul-nav" class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="<?= BASE_PATH; ?>">
-                                <img id="home" src="assets\img\Vector.png" alt="">
-                                <!-- <span class="visually-hidden">(current)</span> -->
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="crud\galerie.php">GALLERIE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">DEVENIR VIP</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">SERVEUR</a>
-                        </li>
 
-                        <!--
+            <a class="navbar-brand p-0" href=""><img id="logo" src="assets\img\starisland.png"></a>
+            <button class="navbar-toggler test" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarColor01">
+                <ul id="ul-nav" class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="<?= BASE_PATH; ?>">
+                            <img id="home" src="assets\img\Vector.png" alt="">
+                            <!-- <span class="visually-hidden">(current)</span> -->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="crud\galerie.php">GALLERIE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">DEVENIR VIP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="<?= BASE_PATH . 'equipe.php'; ?>">SERVEUR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="<?= BASE_PATH . 'connexion.php'; ?>"><img style="height : 20px" ; src="assets\img\images.svg"></a>
+                    </li>
+
+                    <!--
                         <?php if (admin()) :           ?>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ADMIN</a>
@@ -68,27 +72,27 @@
                         ?>
                                   -->
 
-                    </ul>
+                </ul>
 
-                    <!-- <?php if (connect()) :           ?>
+                <!-- <?php if (connect()) :           ?>
                         <a href="<?= BASE_PATH . '?a=dis'; ?>" class="btn btn-primary">Déconnexion</a>
                     <?php else :           ?>
                         <a href="<?= BASE_PATH . 'security/login.php'; ?>" class="btn btn-primary">Connexion</a>
                         <a href="<?= BASE_PATH . 'security/register.php'; ?>" class="btn btn-success">Inscription</a>
                     <?php endif;        ?> -->
 
-                    <div id="tutoEvent">
-                        <a class="nav-link text-white tutoEvent align-items-center" id="nav-link" href="#">
-                            <img class="m-1" id="home" src="assets\img\tuto.png" alt="">
-                            <p class="m-1">TUTORIELS</p>
-                        </a>
-                        <a class="nav-link text-white tutoEvent" href="#">
-                            <img class="m-1" id="home" src="assets\img\event.png" alt="">
-                            <p class="m-1">EVENT</p>
-                        </a>
-                    </div>
+                <div id="tutoEvent">
+                    <a class="nav-link text-white tutoEvent align-items-center" id="nav-link" href="#">
+                        <img class="m-1" id="home" src="assets\img\tuto.png" alt="">
+                        <p class="m-1">TUTORIELS</p>
+                    </a>
+                    <a class="nav-link text-white tutoEvent" href="#">
+                        <img class="m-1" id="home" src="assets\img\event.png" alt="">
+                        <p class="m-1">EVENT</p>
+                    </a>
                 </div>
-            
+            </div>
+
         </nav>
     </header>
 

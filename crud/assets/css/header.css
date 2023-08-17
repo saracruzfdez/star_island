@@ -5,11 +5,11 @@
 header{
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 2001;
 }
 
 .navbar-brand {
-    z-index: 50;
+    z-index: 0;
     position: absolute;
     top: 20%;
 }
@@ -19,7 +19,6 @@ header{
     left: 17%;
     align-items: center;
     justify-content: space-between;
-    width: 30%;
 }
 
 .tutoEvent{

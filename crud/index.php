@@ -1,13 +1,5 @@
 <?php require_once 'config/function.php';
 require_once 'inc/header.inc.php';
-
-// if (isset($_GET['a']) && $_GET['a']=='dis'){
-
-//     unset($_SESSION['user']);
-//     $_SESSION['messages']['info'][]='A bientôt !!';
-//     header('location:./');
-//     exit();
-// }
 ?>
 
 <div class="fond">
@@ -17,9 +9,6 @@ require_once 'inc/header.inc.php';
             BIENVENUE SUR STAR'ISLAND
         </h1>
     </div>
-
-    <!-- <img class="scf-city" src="assets\img\decor3.png" alt="">
-    <img class="scf-city" src="assets\img\decor2.png" alt=""> -->
 
     <!-- Carousel -->
     <div id="carouselExampleIndicators" data-pause="true" class="carousel slide">
@@ -64,8 +53,6 @@ require_once 'inc/header.inc.php';
         </div>
     </div>
 
-
-
     <div class="scf-carousel carousel-item">
         <form class="scf-form">
             <div class="form-group">
@@ -88,7 +75,6 @@ require_once 'inc/header.inc.php';
         </form>
     </div>
 </div>
-
 <!-- Carousel End -->
 
 <div class="fond2">
@@ -172,7 +158,7 @@ require_once 'inc/header.inc.php';
                     <input name="rating_comment" type="hidden" class="rating__input" value=0>
                 </div>
 
-                <input name="nickname_comment" id="nickname" placeholder="Ecrivez votre nickname" type="text" class="form-control">
+                <input name="nickname_comment" id="nickname_comment" placeholder="Ecrivez votre nickname" type="text" class="form-control">
 
                 <input name="comment_text" id="text" placeholder="Ecrivez votre commentaire" type="text" class="form-control mt-4">
             </div>

@@ -20,4 +20,3 @@ const CONFIG=[
 ];
 
 const BASE_PATH='/PHPexosSara/star_island/crud/';
-

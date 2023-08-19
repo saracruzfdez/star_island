@@ -158,7 +158,8 @@ require_once 'inc/header.inc.php';
                     <input name="rating_comment" type="hidden" class="rating__input" value=0>
                 </div>
 
-                <input name="nickname_comment" id="nickname_comment" placeholder="Ecrivez votre nickname" type="text" class="form-control">
+                <input name="nickname_comment" id="nickname_comment
+                " placeholder="Ecrivez votre nickname" type="text" class="form-control">
 
                 <input name="comment_text" id="text" placeholder="Ecrivez votre commentaire" type="text" class="form-control mt-4">
             </div>

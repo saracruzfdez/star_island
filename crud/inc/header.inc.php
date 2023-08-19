@@ -66,8 +66,8 @@
                         <li class="nav-item">
                             <a class="nav-link text-red" href="<?= BASE_PATH.'deconnexion.php'; ?>">DECONNEXION</a>
                         </li>
-                        <li class="nav-item">
-                            Bienvenu <?php var_dump($_SESSION['user']['nickname'])?>
+                        <li class="nav-item" style="color:brown">
+                            Bienvenue <?= $_SESSION['user']['nickname']?>
                         </li>
                     <?php } ?>
                 </ul>

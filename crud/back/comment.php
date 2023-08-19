@@ -11,7 +11,7 @@ if (!empty($_POST)) {
 
         // liste des avatars
         $medias_images_avatar = execute("SELECT * FROM media")->fetchAll(PDO::FETCH_ASSOC);
-        
+
         $randomizeAvatar = rand(0, count($medias_images_avatar) - 1);
 
         execute("INSERT INTO comment (rating_comment, comment_text, publish_date_comment, nickname_comment, activated, id_media) VALUES (:rating_comment, :comment_text, :publish_date_comment, :nickname_comment, :activated, :id_media)", array(
@@ -26,7 +26,7 @@ if (!empty($_POST)) {
         ),);
 
         $_SESSION['messages']['success'][] = 'Comment ajouté';
-        header('Location: '.BASE_PATH);
+        header('Location: ' . BASE_PATH);
         exit();
     } // fin soumission en insert
 
@@ -56,11 +56,7 @@ if (!empty($_POST)) {
 } // fin !empty $_POST
 
 // read et affiche dans table html plus bas :
-$comments = execute("SELECT * FROM comment")->fetchAll(PDO::FETCH_ASSOC);
-// read de media :
-$medias = execute("SELECT * FROM media")->fetchAll(PDO::FETCH_ASSOC);
-// debug($medias);
-
+$comments = execute("SELECT comment.*, media.name_media FROM `comment` INNER JOIN `media` ON comment.id_media = media.id_media")->fetchAll(PDO::FETCH_ASSOC);
 
 if (!empty($_GET) && isset($_GET['id']) && isset($_GET['a']) && $_GET['a'] == 'activate') {
 
@@ -111,7 +107,7 @@ require_once '../inc/backheader.inc.php';
     </thead>
     <tbody>
         <?php foreach ($comments as $comment) : ?>
-            <tr>
+            <tr class="comment">
 
                 <td><?= $comment['rating_comment']; ?></td>
                 <td><?= $comment['comment_text']; ?></td>
@@ -119,23 +115,17 @@ require_once '../inc/backheader.inc.php';
                 <td><?= $comment['nickname_comment']; ?></td>
                 <td><?= $comment['activated'] == 1 ? "Activated" : "Deactivated"; ?></td>
                 <td>
-                    <!-- <?php
-                    // Recorremos las opciones y buscamos la página asociada al contenido actual
-                    foreach ($medias as $mediaOption) {
-                        if ($comment['id_media'] == $mediaOption['id_media']) {
-                            echo $mediaOption['title_media'];
-                            break; // Salimos del bucle interno una vez encontrada la página asociada
-                        }
-                    }
-                    ?> -->
+                    <div class="comment__image">
+                        <img src="<?= BASE_PATH.'assets/img/'.$comment['name_media'] ?>" alt="">
+                    </div>
                 </td>
 
                 <td class="text-center">
 
-                    <?php if($comment['activated'] == 0) { ?>
+                    <?php if ($comment['activated'] == 0) { ?>
                         <a href="?a=activate&id=<?= $comment['id_comment']; ?>" class="btn btn-outline-info">Activer</a>
                     <?php } ?>
-                  
+
 
                     <a href="?id=<?= $comment['id_comment']; ?>&a=del" onclick="return confirm('Etes-vous sûr?')" class="btn btn-outline-danger">Supprimer</a>
 

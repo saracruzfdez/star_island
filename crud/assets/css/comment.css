@@ -1,0 +1,16 @@
+.comment {
+}
+
+.comment .comment__image {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    overflow: hidden;
+    border-width: 0.25rem;
+    border-color: white;
+    border-style: solid;
+}
+
+.comment .comment__image img {
+    width: 100%;
+}

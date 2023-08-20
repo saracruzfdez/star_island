@@ -11,7 +11,7 @@ require_once 'inc/header.inc.php';
     </div>
 
     <!-- Carousel -->
-    <div id="carouselExampleIndicators" data-pause="true" class="carousel slide">
+    <div id="carouselExampleIndicators" data-pause="false" class="carousel slide">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -23,7 +23,6 @@ require_once 'inc/header.inc.php';
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoris enim ad minim veniam, quis nostrud exercitation u exeris nisi ut aliquip ex ea com dolor sit amet, consectetur adipiscing elit, sed do eiusmoris enim ad minim veniam, quis minim veniam, quis consectetur adipiscingexercitation u exeris nisi ut aliquip exea commodo onsequscing consectetur adipiscingexercitation u exeris nisi ut aliquip exea commodo onsequscing exercitation u exeri consectetur adipiscingexercitation u exeris nisi ut aliquip ex ea commodo onsequscing exercitation u exeris nisi ut aliquip ex ea commodo consequat.
                 </p>
             </div>
-
             <div class="scf-carousel carousel-item">
                 <!-- slick carousel -->
                 <div class="w-50 mx-auto" style=>
@@ -50,29 +49,28 @@ require_once 'inc/header.inc.php';
                 </div>
                 <!-- Slick carousel END -->
             </div>
+            <div class="scf-carousel carousel-item">
+                <form class="scf-form">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">STAR'ISLAND</label>
+                        <div>
+                            <img id="scf-topServer" src="assets\img\logo-long.png" alt="">
+                        </div>
+                        <div>
+                            <img class="etoile" src="assets\img\yellowStar.png" alt="">
+                            <img class="etoile" src="assets\img\yellowStar.png" alt="">
+                            <img class="etoile" src="assets\img\yellowStar.png" alt="">
+                            <img class="etoile" src="assets\img\yellowStar.png" alt="">
+                            <img class="etoile" src="assets\img\blackStar.png" alt="">
+                        </div>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ecrivez votre commentaire"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-warning">Publier</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
-
-    <div class="scf-carousel carousel-item">
-        <form class="scf-form">
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">STAR'ISLAND</label>
-                <div>
-                    <img id="scf-topServer" src="assets\img\logo-long.png" alt="">
-                </div>
-                <div>
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\blackStar.png" alt="">
-                </div>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Ecrivez votre commentaire"></textarea>
-            </div>
-            <div>
-                <button type="submit" class="btn btn-warning">Publier</button>
-            </div>
-        </form>
     </div>
 </div>
 <!-- Carousel End -->

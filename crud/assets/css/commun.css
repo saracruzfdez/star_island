@@ -15,10 +15,11 @@ body {
 }
 
 .fond {
-    background-image: url("../img/decor1.png");
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url("../img/decor2.png");
+
 }
 
 .fond2 {
@@ -45,13 +46,13 @@ body {
 /* Carousel */
 #carouselExampleIndicators {
     position: absolute;
-    top: 44%;
+    top: 40%;
     width: 100%;
     left: 0.4%
 }
 
 .scf-carousel {
-    height: 290px;
+    height: 307px;
 }
 
 .carousel-indicators li {

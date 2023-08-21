@@ -1,5 +1,8 @@
 <?php require_once 'config/function.php';
 require_once 'inc/header.inc.php';
+
+$comments = execute("SELECT comment.*, media.name_media FROM `comment` INNER JOIN `media` ON comment.id_media = media.id_media")->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <div class="fond">
@@ -81,72 +84,37 @@ require_once 'inc/header.inc.php';
     <?php require_once 'inc/reseaux.inc.php' ?>
     <!-- Social media END -->
 
-    <!-- Avatars -->
-    <section class="avatars">
-        <div class="avatarItem" id="avatarItem1">
-            <img class="avatarItemImage" id="avatarItemImage1" src="assets\img\portrait1.jpg" alt="">
-            <div id="avatarContent1">
+    <!-- Comment -->
+    <section class="comments">
+        <?php foreach ($comments as $comment) { ?>
+            <div class="commentItem">
                 <div>
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\blackStar.png" alt="">
-                    <img class="etoile" src="assets\img\blackStar.png" alt="">
+                    <img class="commentItem__image" src="<?= BASE_PATH.'assets/img/'.$comment['name_media'] ?>" alt="">
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div class="avatarItem" id="avatarItem4">
-            <img class="avatarItemImage" id="avatarItemImage4" src="assets\img\portrait4.jpg" alt="">
-            <div id="avatarContent4">
                 <div>
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\blackStar.png" alt="">
+                    <div class="commentItem__rating ratingFront">
+                        <img class="ratingFront__etoile" src="assets\img\yellowStar.png" alt="">
+                        <img class="ratingFront__etoile" src="assets\img\yellowStar.png" alt="">
+                        <img class="ratingFront__etoile" src="assets\img\yellowStar.png" alt="">
+                        <img class="ratingFront__etoile" src="assets\img\blackStar.png" alt="">
+                        <img class="ratingFront__etoile" src="assets\img\blackStar.png" alt="">
+                    </div>
+                    <div class="commentItem__text">
+                        <p><?= $comment['comment_text'] ?></p>
+                    </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-        </div>
-        <div class="avatarItem" id="avatarItem3">
-            <img class="avatarItemImage" id="avatarItemImage3" src="assets\img\portrait3.jpg" alt="">
-            <div id="avatarContent3">
-                <div>
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-        </div>
-        <div class="avatarItem" id="avatarItem2">
-            <img class="avatarItemImage" id="avatarItemImage2" src="assets\img\portrait2.jpg" alt="">
-            <div id="avatarContent2">
-                <div>
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\yellowStar.png" alt="">
-                    <img class="etoile" src="assets\img\blackStar.png" alt="">
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-        </div>
-
-
+        <?php } ?>
     </section>
-    <!-- Avatars END -->
+    <!-- Comment END -->
 
     <!-- Form -->
     <section class="form">
-        <form action="<?=  BASE_PATH.'back/comment.php'; ?>" method="post" class="scf-form">
+        <form action="<?= BASE_PATH . 'back/comment.php'; ?>" method="post" class="scf-form">
 
             <div class="form-group">
                 <label for="text">VOTRE AVIS NOUS INTERESSE !</label>
-                
+
                 <div class="rating">
                     <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>
                     <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>

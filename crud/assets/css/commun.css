@@ -106,81 +106,48 @@ body {
 }
 
 /* Avatars */
-.avatars {
-    height: 300px;
-    width: 900px;
-    position: absolute;
-    left: 19%;
+.comments {
     top: 115%;
+    height: 300px;
+    width: 100%;
+    position: absolute;
     display: flex;
-    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    gap: 2rem;
 }
 
-.avatarItem {
+.commentItem {
+    align-self: center;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
     box-sizing: border-box;
-    position: absolute;
-    width: 322px;
-    height: 105px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 40px 40px 40px 0px;
 }
 
-#avatarItem1 {
-    top: 0px;
-    left: 50px
-}
-
-#avatarItem2 {
-    top: 150px;
-    left: 50px
-}
-
-#avatarItem3 {
-    top: 50px;
-    right: 50px
-}
-
-#avatarItem4 {
-    top: 200px;
-    right: 50px
-}
-
-.avatarItemImage {
+.commentItem .commentItem__image {
+    width: 5rem;
+    height: 5rem;
     box-sizing: border-box;
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border: 2px solid #E13374;
+    border: 2px solid #ffffff;
     border-radius: 50%;
     background-image: cover;
 }
 
-#avatarItemImage1,
-#avatarItemImage2 {
-    top: 5px;
-    left: 5px;
+.commentItem .commentItem__rating {
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.25rem;
+    justify-content: center;
 }
 
-#avatarItemImage3,
-#avatarItemImage4 {
-    top: 5px;
-    right: 5px;
-}
-
-#avatarContent1,
-#avatarContent2 {
-    width: 80%;
-    position: relative;
-    left: 30%;
-    top: 10%
-}
-
-#avatarContent3,
-#avatarContent4 {
-    width: 80%;
-    position: relative;
-    left: 10%;
-    top: 10%
+.commentItem .ratingFront .ratingFront__etoile {
+    width: 1rem;
+    height: 1rem;
 }
 
 /* Form */
@@ -245,7 +212,7 @@ body {
     }
 
     /* Avatars */
-    .avatars {
+    .comments {
         height: 300px;
         width: 250px;
         position: absolute;
@@ -253,26 +220,6 @@ body {
         top: 100%;
         display: flex;
         flex-direction: row-reverse;
-    }
-
-    #avatarItem1 {
-        top: 0px;
-        left: -20px
-    }
-
-    #avatarItem2 {
-        top: 150px;
-        left: -20px
-    }
-
-    #avatarItem3 {
-        top: 300px;
-        left: -20px
-    }
-
-    #avatarItem4 {
-        top: 450px;
-        left: -20px
     }
 
     /* Form */

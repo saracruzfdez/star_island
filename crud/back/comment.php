@@ -126,7 +126,6 @@ require_once '../inc/backheader.inc.php';
                         <a href="?a=activate&id=<?= $comment['id_comment']; ?>" class="btn btn-outline-info">Activer</a>
                     <?php } ?>
 
-
                     <a href="?id=<?= $comment['id_comment']; ?>&a=del" onclick="return confirm('Etes-vous sûr?')" class="btn btn-outline-danger">Supprimer</a>
 
                 </td>

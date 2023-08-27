@@ -3,6 +3,18 @@ require_once 'inc/header.inc.php';
 
 $comments = execute("SELECT comment.*, media.name_media FROM `comment` INNER JOIN `media` ON comment.id_media = media.id_media")->fetchAll(PDO::FETCH_ASSOC);
 
+function isActivated($comment)
+{
+    if ($comment['activated'] == 0)
+        return FALSE;
+    else
+        return TRUE;
+}
+
+$filteredComments = array_filter($comments, "isActivated");
+
+$content = execute("SELECT description_content FROM `content` WHERE title_content = 'Présentation accueil'")->fetch(PDO::FETCH_ASSOC);
+
 ?>
 
 <div class="fond">
@@ -23,7 +35,7 @@ $comments = execute("SELECT comment.*, media.name_media FROM `comment` INNER JOI
         <div class="carousel-inner">
             <div class="scf-carousel carousel-item active">
                 <p class="press">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmoris enim ad minim veniam, quis nostrud exercitation u exeris nisi ut aliquip ex ea com dolor sit amet, consectetur adipiscing elit, sed do eiusmoris enim ad minim veniam, quis minim veniam, quis consectetur adipiscingexercitation u exeris nisi ut aliquip exea commodo onsequscing consectetur adipiscingexercitation u exeris nisi ut aliquip exea commodo onsequscing exercitation u exeri consectetur adipiscingexercitation u exeris nisi ut aliquip ex ea commodo onsequscing exercitation u exeris nisi ut aliquip ex ea commodo consequat.
+                    <?= $content['description_content'] ?>
                 </p>
             </div>
             <div class="scf-carousel carousel-item">
@@ -86,10 +98,14 @@ $comments = execute("SELECT comment.*, media.name_media FROM `comment` INNER JOI
 
     <!-- Comment -->
     <section class="comments">
-        <?php foreach ($comments as $comment) { ?>
+
+
+        <?php foreach ($filteredComments as $comment) { ?>
+
+
             <div class="commentItem">
                 <div>
-                    <img class="commentItem__image" src="<?= BASE_PATH.'assets/img/'.$comment['name_media'] ?>" alt="">
+                    <img class="commentItem__image" src="<?= BASE_PATH . 'assets/img/' . $comment['name_media'] ?>" alt="">
                 </div>
                 <div>
                     <div class="commentItem__rating ratingFront">
@@ -104,6 +120,8 @@ $comments = execute("SELECT comment.*, media.name_media FROM `comment` INNER JOI
                     </div>
                 </div>
             </div>
+
+
         <?php } ?>
     </section>
     <!-- Comment END -->

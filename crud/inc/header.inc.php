@@ -29,7 +29,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
 
-            <a class="navbar-brand p-0" href=""><img id="logo" src="assets\img\starisland.png" style="width:20%"></a>
+            <a class="navbar-brand p-0" href=""><img id="logo" src="assets\img\starisland.png"></a>
 
             <button class="navbar-toggler test" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -1,4 +1,10 @@
-function turnStarsOn(rootElement, count) {
+/**
+ * Cette function turn star on
+ * 
+ * @param {*} rootElement la racine du composant rating
+ * @param {*} count specifie le nombre d'étoiles en partant de la gauche à activer
+ */
+function turnStarsOn(rootElement, count){
     const starElements = Array.from(rootElement.querySelectorAll(".rating__star"))
     starElements.forEach((starElement, index) => {
         const starOn = starElement.querySelector(".rating__starOn")
@@ -9,34 +15,42 @@ function turnStarsOn(rootElement, count) {
         } else {
             starOff.style.display = "inline"
             starOn.style.display = "none"
-
         }
     })
-
 }
 
-function ratingComponent() {
-    const rootElement = document.querySelector(".rating")
-    if (!rootElement) {
-        throw new Error("no element")
-    }
+/**
+ * 
+ * @param {Element} rootElement 
+ */
+function initRatingComponent(rootElement) {
 
+    const isReadOnly = rootElement.className.includes("readOnly")
     const inputElement = rootElement.querySelector(".rating__input")
     if (!inputElement) {
         throw new Error("no element")
     }
 
-    // je recupere un tableau de ts les elements etoile
-    const starElements = Array.from(rootElement.querySelectorAll(".rating__star"))
+    const value = inputElement.value;
 
-    starElements.forEach((starElement, index) => {
-        starElement.addEventListener("click", () => {
-            inputElement.value = index
-            turnStarsOn(rootElement, index + 1)
-            console.log("click on star : ", index)
+    turnStarsOn(rootElement, value)
+
+    if (!isReadOnly){
+        // je recupere un tableau de ts les elements etoile
+        const starElements = Array.from(rootElement.querySelectorAll(".rating__star"))
+        
+        starElements.forEach((starElement, index) => {
+            starElement.addEventListener("click", () => {
+                inputElement.value = index
+                turnStarsOn(rootElement, index + 1)
+                console.log("click on star : ", index)
+            })
         })
-    })
-
+    }
 }
 
-ratingComponent()
+const rootElements = Array.from(document.querySelectorAll(".rating"));
+
+rootElements.forEach((rootElement)=>{
+    initRatingComponent(rootElement)
+})

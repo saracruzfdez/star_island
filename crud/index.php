@@ -97,8 +97,7 @@ $content = execute("SELECT description_content FROM `content` WHERE title_conten
     <!-- Social media END -->
 
     <!-- Comment -->
-    <section class="comments">
-
+    <div class="comments">
 
         <?php foreach ($filteredComments as $comment) { ?>
 
@@ -108,12 +107,13 @@ $content = execute("SELECT description_content FROM `content` WHERE title_conten
                     <img class="commentItem__image" src="<?= BASE_PATH . 'assets/img/' . $comment['name_media'] ?>" alt="">
                 </div>
                 <div>
-                    <div class="commentItem__rating ratingFront">
-                        <img class="ratingFront__etoile" src="assets\img\yellowStar.png" alt="">
-                        <img class="ratingFront__etoile" src="assets\img\yellowStar.png" alt="">
-                        <img class="ratingFront__etoile" src="assets\img\yellowStar.png" alt="">
-                        <img class="ratingFront__etoile" src="assets\img\blackStar.png" alt="">
-                        <img class="ratingFront__etoile" src="assets\img\blackStar.png" alt="">
+                    <div class="rating readOnly">
+                        <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>
+                        <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>
+                        <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>
+                        <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>
+                        <div class="rating__star"><span class="rating__starOff">&#x2606;</span><span class="rating__starOn">&#x2605;</span></div>
+                        <input name="rating_comment" type="hidden" class="rating__input" value=<?= $comment['rating_comment']?>>
                     </div>
                     <div class="commentItem__text">
                         <p><?= $comment['comment_text'] ?></p>
@@ -123,11 +123,11 @@ $content = execute("SELECT description_content FROM `content` WHERE title_conten
 
 
         <?php } ?>
-    </section>
-    <!-- Comment END -->
+        <!-- Comment END -->
+    </div>
 
     <!-- Form -->
-    <section class="form">
+    <div class="form">
         <form action="<?= BASE_PATH . 'back/comment.php'; ?>" method="post" class="scf-form">
 
             <div class="form-group">
@@ -142,17 +142,16 @@ $content = execute("SELECT description_content FROM `content` WHERE title_conten
                     <input name="rating_comment" type="hidden" class="rating__input" value=0>
                 </div>
 
-                <input name="nickname_comment" id="nickname_comment
-                " placeholder="Ecrivez votre nickname" type="text" class="form-control">
+                <input name="nickname_comment" id="nickname_comment" placeholder="Ecrivez votre nickname" type="text" class="form-control" required>
 
-                <input name="comment_text" id="text" placeholder="Ecrivez votre commentaire" type="text" class="form-control mt-4">
+                <input name="comment_text" id="text" placeholder="Ecrivez votre commentaire" type="text" class="form-control mt-4" required>
             </div>
 
             <div>
                 <button type="submit" class="btn btn-warning">Publier</button>
             </div>
         </form>
-    </section>
+    </div>
 </div>
 
 <!-- Form END -->

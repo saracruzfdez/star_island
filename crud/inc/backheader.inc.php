@@ -99,7 +99,7 @@
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/comment.php' ?>">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/events.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Gestion d'events</span>
                 </a>
@@ -107,7 +107,7 @@
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/comment.php' ?>">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/team.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Gestion de la team</span>
                 </a>

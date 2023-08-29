@@ -10,7 +10,7 @@ function reboursF() {
         seconde = document.getElementById("seconde"),
         seconde_label = document.getElementById("seconde_label"),
         maintenant = new Date(),
-        finannee = new Date('June 30, 2023 23:59:59');
+        finannee = new Date('October 30, 2023 23:59:59');
 
     let total_secondes = (finannee - maintenant) / 1000;
 

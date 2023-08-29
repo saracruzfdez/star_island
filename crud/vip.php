@@ -1,13 +1,10 @@
 <?php require_once 'config/function.php';
 require_once 'inc/header.inc.php';
 
-// if (isset($_GET['a']) && $_GET['a']=='dis'){
+$contentVip1 = execute("SELECT description_content FROM `content` WHERE title_content = 'Présentation VIP'")->fetch(PDO::FETCH_ASSOC);
 
-//     unset($_SESSION['user']);
-//     $_SESSION['messages']['info'][]='A bientôt !!';
-//     header('location:./');
-//     exit();
-// }
+$contentVip2 = execute("SELECT description_content FROM `content` WHERE title_content = 'Présentation VIP 2'")->fetch(PDO::FETCH_ASSOC);
+
 ?>
 <div class="fond">
     <div class="titre">
@@ -19,7 +16,7 @@ require_once 'inc/header.inc.php';
     <div class="vip">
         <div class="vip1">
             <p class="scf-textVip1">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nesciunt excepturi quae non consectetur voluptas officia, facilis illum tempore odio rem obcaecati quo labore veritatis magnam voluptates maxime accusantium excepturilabore veritatis magnam voluptates maxime accusantium qui?
+            <?= $contentVip1['description_content'] ?>
             </p>
             <img class="pl-4 scf-imgVip1" src="assets\img\Group 6.png" alt="">
         </div>
@@ -29,7 +26,8 @@ require_once 'inc/header.inc.php';
         <div class="vip2">
             <img class="pr-4 scf-imgVip2" src="assets\img\Group 5.png" alt="">
             <p class="scf-textVip2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nesciunt excepturi quae non consectetur voluptas officia, facilis illum tempore odio rem obcaecati quo labore v? Quis nesciunt excepturi qui? Quis nesciunt excepturilabore veritatis magnam voluptates maxime accusantium qui? </p>
+            <?= $contentVip2['description_content'] ?>
+            </p>
         </div>
     </div>
 </div>

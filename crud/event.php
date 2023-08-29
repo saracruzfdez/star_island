@@ -60,12 +60,12 @@ require_once 'inc/header.inc.php';
 
             <div id="titreEvent2">
                 <h2>
-                    Titre
+                🌟 Événement des Joueurs de RP ! 🌟
                 </h2>
             </div>
             <p id="content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt et deleniti porro. Quisquam dolores facere itaque in nobis, quod optio, est reiciendis incidunt non veritatis tenetur nisi odit! Quas, deleniti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt et dtur nisi odit! Quas, deleniti.Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt et deleniti porro. Quisquam dolores facere itaque in nobis, quod optio, est reiciendis incidunt non veritatis tenetur nisi odit! Quas, deleniti.
-            </p>
+            Êtes-vous prêt à plonger dans des aventures épiques, à donner vie à des personnages extraordinaires et à explorer des mondes fantastiques ? Rejoignez-nous pour une expérience de jeu de rôle inoubliable qui repousse les limites de l'imagination. 🎭 Quoi : Grand Événement des Joueurs de RP 🌍 Où : Centre des Conventions d'Étheria ⚔️ Thème : "Légendes Éthérées : Voyage à travers les Royaumes" 🌌 Événements à ne pas manquer 🌌 🏰 La Quête des Royaumes Perdus : Participez...
+        </p>
         </div>
 
     </section>

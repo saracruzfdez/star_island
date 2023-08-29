@@ -11,7 +11,6 @@
 .box_heure,
 .box_minute,
 .box_seconde {
-    padding: 8px;
     color: rgb(211, 0, 84);
     font-family: "Iceland-Regular";
 }

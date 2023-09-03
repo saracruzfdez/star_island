@@ -7,16 +7,17 @@ const CONFIG=[
     'db'=>[
         'HOST'=>'localhost',
         'PORT'=>'3306',
-        'NAME'=>'startisland',
-        'USER'=>'root',
-        'PWD'=>''
-    ],
+        'NAME'=>'dece5725_sara_starIsland',
+        'USER'=>'dece5725_cezdigitevogue',
+        'PWD'=>'Cezevogue1986@'],
+
 
     'app'=>[
         'name'=>'STARISLAND',
-        'projecturl'=>'http://localhost/PHPexosSara/star_island/crud/'
+        'projecturl'=>'sara.cezdigit.com'
     ]
 
 ];
 
-const BASE_PATH='/PHPexosSara/star_island/crud/';
+
+const BASE_PATH='/';

@@ -55,7 +55,7 @@
                 gestion
             </div>
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/media_type.php' ?>">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . 'back/media_type.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Gestion type média</span>
                 </a>
@@ -64,7 +64,7 @@
             <hr class="sidebar-divider d-none d-md-block">
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/pages.php' ?>">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . 'back/pages.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Gestion pages</span>
                 </a>
@@ -73,7 +73,7 @@
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/content.php' ?>">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . 'back/content.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Gestion contenu</span>
                 </a>
@@ -82,7 +82,7 @@
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/media.php' ?>">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . 'back/media.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Gestion media</span>
                 </a>
@@ -91,7 +91,7 @@
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/comment.php' ?>">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . 'back/comment.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Gestion commentaires</span>
                 </a>
@@ -99,7 +99,7 @@
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/events.php' ?>">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . 'back/events.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Gestion d'events</span>
                 </a>
@@ -107,7 +107,7 @@
 
             <hr class="sidebar-divider">
             <li class="nav-item">
-                <a class="nav-link collapsed" href=" <?= BASE_PATH . '../crud/back/team.php' ?>">
+                <a class="nav-link collapsed" href=" <?= BASE_PATH . 'back/team.php' ?>">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Gestion de la team</span>
                 </a>

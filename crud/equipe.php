@@ -1,6 +1,7 @@
 <?php require_once 'config/function.php';
 require_once 'inc/header.inc.php';
 
+$teams = execute("SELECT * FROM team")
 
 ?>
 
@@ -31,8 +32,15 @@ require_once 'inc/header.inc.php';
     <!-- equipe Section -->
     <section class="equipe">
 
+<?php foreach ($teams as $team) { ?>
+
         <div class="equipeItem">
-            <img src="assets\img\profil1.jpg" alt="">
+            <div>
+                <img src="assets\img\profil2.jpg" alt="">
+            </div>
+            <div style="padding-left: 25%; color: white;">
+                <?= $team['nickname_team']?>
+            </div>
             <div class="equipeItemReseaux">
                 <div>
                     <img src="assets\img\logo_twitch.png" alt="">
@@ -41,43 +49,10 @@ require_once 'inc/header.inc.php';
                     <img src="assets\img\discord.png" alt="">
                 </div>
             </div>
-        </div>
-        <div class="equipeItem">
-            <img src="assets\img\profil4.png" alt="">
-            <div class="equipeItemReseaux">
-                <div>
-                    <img src="assets\img\logo_twitch.png" alt="">
-                </div>
-                <div>
-                    <img src="assets\img\discord.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="equipeItem">
-            <img src="assets\img\profil2.jpg" alt="">
-        </div>
-        <div class="equipeItem">
-            <img src="assets\img\profil3.png" alt="">
-        </div>
-        <div class="equipeItem">
-            <img src="assets\img\profil7.jpg" alt="">
-        </div>
-        <div class="equipeItem">
-            <img src="assets\img\profil5.png" alt="">
-        </div>
-        <div class="equipeItem">
-            <img src="assets\img\profil8.jpg" alt="">
-        </div>
-        <div class="equipeItem">
-            <img src="assets\img\profil9.jpg" alt="">
-        </div>
-        <div class="equipeItem">
-            <img src="assets\img\profil10.jpg" alt="">
-        </div>
-        <div class="equipeItem">
-            <img src="assets\img\profil11.jpg" alt="">
         </div>
 
+        <?php } ?>
+        
     </section>
 
 </div>
@@ -85,4 +60,4 @@ require_once 'inc/header.inc.php';
 <?php require_once 'inc/reseaux.inc.php' ?>
 <!-- Social media END -->
 
-<?php require_once 'inc/footer.inc.php';          ?>
+<?php require_once 'inc/footer.inc.php' ?>

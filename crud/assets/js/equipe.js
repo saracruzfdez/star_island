@@ -26,3 +26,28 @@ function visibility2() {
 }
 
 visibility2()
+
+//***************** */
+
+document.addEventListener("DOMContentLoaded", function() {
+    var rolButtons = document.querySelectorAll('.rolButton');
+    var usuarios = document.querySelectorAll('.usuario');
+
+    // Agregar un controlador de eventos a cada botón de rol
+    rolButtons.forEach(function(boton) {
+        boton.addEventListener("click", function() {
+            var rolSeleccionado = boton.getAttribute('data-rol');
+
+            // Mostrar u ocultar usuarios basados en el rol
+            usuarios.forEach(function(usuario) {
+                if (rolSeleccionado === 'Tous') {
+                    usuario.style.display = 'flex';
+                } else if (usuario.classList.contains(rolSeleccionado)) {
+                    usuario.style.display = 'flex';
+                } else {
+                    usuario.style.display = 'none';
+                }
+            });
+        });
+    });
+});

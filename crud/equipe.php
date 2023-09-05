@@ -1,7 +1,7 @@
 <?php require_once 'config/function.php';
 require_once 'inc/header.inc.php';
 
-$teams = execute("SELECT * FROM team");
+$teams = execute("SELECT * FROM team")->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <div class="fondStaff">
@@ -40,7 +40,7 @@ $teams = execute("SELECT * FROM team");
     <section class="equipe">
         <?php foreach ($teams as $team) { ?>
 
-            <div class="equipeItem usuario">
+            <div class="equipeItem usuario <?= $team['role_team'] ?>">
                 <div style="text-align: center;">
                     <div>
                         <img src="assets\img\profil2.jpg" alt="">
@@ -58,6 +58,7 @@ $teams = execute("SELECT * FROM team");
                     </div>
                 </div>
             </div>
+
         <?php } ?>
     </section>
 </div>

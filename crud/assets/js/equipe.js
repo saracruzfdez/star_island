@@ -35,15 +35,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Agregar un controlador de eventos a cada botón de rol
     rolButtons.forEach(function(boton) {
-        boton.addEventListener("click", function() {
+        boton.addEventListener("click", ()=> {
             var rolSeleccionado = boton.getAttribute('data-rol');
 
             // Mostrar u ocultar usuarios basados en el rol
             usuarios.forEach(function(usuario) {
                 if (rolSeleccionado === 'Tous') {
-                    usuario.style.display = 'flex';
+                    usuario.style.display = 'block';
                 } else if (usuario.classList.contains(rolSeleccionado)) {
-                    usuario.style.display = 'flex';
+                    usuario.style.display = 'block';
                 } else {
                     usuario.style.display = 'none';
                 }
